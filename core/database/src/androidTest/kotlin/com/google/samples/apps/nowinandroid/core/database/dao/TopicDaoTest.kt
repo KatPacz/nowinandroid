@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.database.dao
+package com.yourcompany.partygameapp.core.database.dao
 
-import com.google.samples.apps.nowinandroid.core.database.model.TopicEntity
+import com.yourcompany.partygameapp.core.database.model.TopicEntity
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
 import org.junit.Test

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.interests.navigation
+package com.yourcompany.partygameapp.feature.interests.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavOptions

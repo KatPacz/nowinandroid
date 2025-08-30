@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.network.model
+package com.yourcompany.partygameapp.core.network.model
 
 import android.annotation.SuppressLint
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.model.data.NewsResource
 import kotlinx.datetime.Instant
 import kotlinx.serialization.Serializable
 

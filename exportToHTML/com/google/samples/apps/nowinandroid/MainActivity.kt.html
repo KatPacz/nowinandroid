@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #cf8e6d;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">@AndroidEntryPoint</span>
+<span class="s1">class </span><span class="s0">MainActivity : ComponentActivity</span><span class="s2">() {</span>
+    <span class="s0">override </span><span class="s1">fun </span><span class="s0">onCreate</span><span class="s2">(</span><span class="s0">savedInstanceState: Bundle?</span><span class="s2">) {</span>
+        <span class="s1">super</span><span class="s2">.</span><span class="s0">onCreate</span><span class="s2">(</span><span class="s0">savedInstanceState</span><span class="s2">)</span>
+        <span class="s0">setContent </span><span class="s2">{</span>
+            <span class="s0">YourAppTheme </span><span class="s2">{ </span><span class="s3">// Our custom theme from Phase 1</span>
+                <span class="s1">val </span><span class="s0">navController </span><span class="s2">= </span><span class="s0">rememberNavController</span><span class="s2">()</span>
+                <span class="s0">NavHost</span><span class="s2">(</span><span class="s0">navController </span><span class="s2">= </span><span class="s0">navController</span><span class="s2">, </span><span class="s0">startDestination </span><span class="s2">= </span><span class="s0">Routes</span><span class="s2">.</span><span class="s0">HOME</span><span class="s2">) {</span>
+                    <span class="s0">composable</span><span class="s2">(</span><span class="s0">Routes</span><span class="s2">.</span><span class="s0">HOME</span><span class="s2">) {</span>
+                        <span class="s0">HomeScreen</span><span class="s2">(</span>
+                            <span class="s0">onDeckSelected </span><span class="s2">= { </span><span class="s0">deckId </span><span class="s2">-&gt;</span>
+                                <span class="s0">navController</span><span class="s2">.</span><span class="s0">navigate</span><span class="s2">(</span><span class="s4">&quot;pre_game/</span><span class="s1">$</span><span class="s0">deckId</span><span class="s4">&quot;</span><span class="s2">)</span>
+                            <span class="s2">}</span>
+                        <span class="s2">)</span>
+                    <span class="s2">}</span>
+                    <span class="s0">composable</span><span class="s2">(</span><span class="s0">Routes</span><span class="s2">.</span><span class="s0">PRE_GAME</span><span class="s2">) { </span><span class="s0">backStackEntry </span><span class="s2">-&gt;</span>
+                        <span class="s1">val </span><span class="s0">deckId </span><span class="s2">= </span><span class="s0">backStackEntry</span><span class="s2">.</span><span class="s0">arguments?</span><span class="s2">.</span><span class="s0">getString</span><span class="s2">(</span><span class="s4">&quot;deckId&quot;</span><span class="s2">)</span><span class="s0">?</span><span class="s2">.</span><span class="s0">toIntOrNull</span><span class="s2">()</span>
+                        <span class="s1">if </span><span class="s2">(</span><span class="s0">deckId </span><span class="s2">!= </span><span class="s1">null</span><span class="s2">) {</span>
+                            <span class="s0">PreGameScreen</span><span class="s2">(</span>
+                                <span class="s0">deckId </span><span class="s2">= </span><span class="s0">deckId</span><span class="s2">,</span>
+                                <span class="s0">onStartGame </span><span class="s2">= { </span><span class="s3">/* Navigate to gameplay screen */ </span><span class="s2">}</span>
+                            <span class="s2">)</span>
+                        <span class="s2">}</span>
+                    <span class="s2">}</span>
+                    <span class="s3">// Add other composables for gameplay, settings, etc. here</span>
+                <span class="s2">}</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>

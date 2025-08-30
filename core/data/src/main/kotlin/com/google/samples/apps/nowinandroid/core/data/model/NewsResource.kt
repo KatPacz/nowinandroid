@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.model
+package com.yourcompany.partygameapp.core.data.model
 
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceEntity
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceTopicCrossRef
-import com.google.samples.apps.nowinandroid.core.database.model.TopicEntity
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkNewsResource
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkTopic
-import com.google.samples.apps.nowinandroid.core.network.model.asExternalModel
+import com.yourcompany.partygameapp.core.database.model.NewsResourceEntity
+import com.yourcompany.partygameapp.core.database.model.NewsResourceTopicCrossRef
+import com.yourcompany.partygameapp.core.database.model.TopicEntity
+import com.yourcompany.partygameapp.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.network.model.NetworkNewsResource
+import com.yourcompany.partygameapp.core.network.model.NetworkTopic
+import com.yourcompany.partygameapp.core.network.model.asExternalModel
 
 fun NetworkNewsResource.asEntity() = NewsResourceEntity(
     id = id,

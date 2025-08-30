@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.ui
+package com.yourcompany.partygameapp.core.ui
 
 import androidx.compose.runtime.compositionLocalOf
 import kotlinx.datetime.TimeZone

@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.interests
+package com.yourcompany.partygameapp.interests
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.navigation.testing.invoke
-import com.google.samples.apps.nowinandroid.core.domain.GetFollowableTopicsUseCase
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestTopicsRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestUserDataRepository
-import com.google.samples.apps.nowinandroid.core.testing.util.MainDispatcherRule
-import com.google.samples.apps.nowinandroid.feature.interests.InterestsUiState
-import com.google.samples.apps.nowinandroid.feature.interests.InterestsViewModel
-import com.google.samples.apps.nowinandroid.feature.interests.navigation.InterestsRoute
+import com.yourcompany.partygameapp.core.domain.GetFollowableTopicsUseCase
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.model.data.Topic
+import com.yourcompany.partygameapp.core.testing.repository.TestTopicsRepository
+import com.yourcompany.partygameapp.core.testing.repository.TestUserDataRepository
+import com.yourcompany.partygameapp.core.testing.util.MainDispatcherRule
+import com.yourcompany.partygameapp.feature.interests.InterestsUiState
+import com.yourcompany.partygameapp.feature.interests.InterestsViewModel
+import com.yourcompany.partygameapp.feature.interests.navigation.InterestsRoute
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.UnconfinedTestDispatcher

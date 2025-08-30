@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.database.dao
+package com.yourcompany.partygameapp.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.google.samples.apps.nowinandroid.core.database.model.TopicFtsEntity
+import com.yourcompany.partygameapp.core.database.model.TopicFtsEntity
 import kotlinx.coroutines.flow.Flow
 
 /**

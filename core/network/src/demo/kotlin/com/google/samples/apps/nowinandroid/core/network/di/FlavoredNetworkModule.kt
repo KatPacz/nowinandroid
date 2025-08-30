@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.network.di
+package com.yourcompany.partygameapp.core.network.di
 
-import com.google.samples.apps.nowinandroid.core.network.NiaNetworkDataSource
-import com.google.samples.apps.nowinandroid.core.network.demo.DemoNiaNetworkDataSource
+import com.yourcompany.partygameapp.core.network.NiaNetworkDataSource
+import com.yourcompany.partygameapp.core.network.demo.DemoNiaNetworkDataSource
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

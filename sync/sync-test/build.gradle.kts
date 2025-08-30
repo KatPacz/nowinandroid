@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 plugins {
-    alias(libs.plugins.nowinandroid.android.library)
-    alias(libs.plugins.nowinandroid.hilt)
+    alias(libs.plugins.partygameapp.android.library)
+    alias(libs.plugins.partygameapp.hilt)
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.core.sync.test"
+    namespace = "com.yourcompany.partygameapp.core.sync.test"
 }
 
 dependencies {

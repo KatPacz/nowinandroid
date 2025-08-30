@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.interests
+package com.yourcompany.partygameapp.feature.interests
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
@@ -26,20 +26,20 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaBackground
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaLoadingWheel
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.core.ui.DevicePreviews
-import com.google.samples.apps.nowinandroid.core.ui.FollowableTopicPreviewParameterProvider
-import com.google.samples.apps.nowinandroid.core.ui.TrackScreenViewEvent
+import com.yourcompany.partygameapp.core.designsystem.component.NiaBackground
+import com.yourcompany.partygameapp.core.designsystem.component.NiaLoadingWheel
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.ui.DevicePreviews
+import com.yourcompany.partygameapp.core.ui.FollowableTopicPreviewParameterProvider
+import com.yourcompany.partygameapp.core.ui.TrackScreenViewEvent
 
 @Composable
 fun InterestsRoute(
     onTopicClick: (String) -> Unit,
     modifier: Modifier = Modifier,
     shouldHighlightSelectedTopic: Boolean = false,
-    viewModel: InterestsViewModel = hiltViewModel(),
+    viewModel: InterestsViewModel = hilthiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 

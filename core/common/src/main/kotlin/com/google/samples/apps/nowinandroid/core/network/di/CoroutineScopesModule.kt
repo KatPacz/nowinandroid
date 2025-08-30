@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.network.di
+package com.yourcompany.partygameapp.core.network.di
 
-import com.google.samples.apps.nowinandroid.core.network.Dispatcher
-import com.google.samples.apps.nowinandroid.core.network.NiaDispatchers.Default
+import com.yourcompany.partygameapp.core.network.Dispatcher
+import com.yourcompany.partygameapp.core.network.NiaDispatchers.Default
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

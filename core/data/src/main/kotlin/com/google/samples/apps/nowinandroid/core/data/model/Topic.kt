@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.model
+package com.yourcompany.partygameapp.core.data.model
 
-import com.google.samples.apps.nowinandroid.core.database.model.TopicEntity
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkTopic
+import com.yourcompany.partygameapp.core.database.model.TopicEntity
+import com.yourcompany.partygameapp.core.network.model.NetworkTopic
 
 fun NetworkTopic.asEntity() = TopicEntity(
     id = id,

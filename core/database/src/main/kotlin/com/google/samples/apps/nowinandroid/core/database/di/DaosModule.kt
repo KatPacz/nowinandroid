@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.database.di
+package com.yourcompany.partygameapp.core.database.di
 
-import com.google.samples.apps.nowinandroid.core.database.NiaDatabase
-import com.google.samples.apps.nowinandroid.core.database.dao.NewsResourceDao
-import com.google.samples.apps.nowinandroid.core.database.dao.NewsResourceFtsDao
-import com.google.samples.apps.nowinandroid.core.database.dao.RecentSearchQueryDao
-import com.google.samples.apps.nowinandroid.core.database.dao.TopicDao
-import com.google.samples.apps.nowinandroid.core.database.dao.TopicFtsDao
+import com.yourcompany.partygameapp.core.database.NiaDatabase
+import com.yourcompany.partygameapp.core.database.dao.NewsResourceDao
+import com.yourcompany.partygameapp.core.database.dao.NewsResourceFtsDao
+import com.yourcompany.partygameapp.core.database.dao.RecentSearchQueryDao
+import com.yourcompany.partygameapp.core.database.dao.TopicDao
+import com.yourcompany.partygameapp.core.database.dao.TopicFtsDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

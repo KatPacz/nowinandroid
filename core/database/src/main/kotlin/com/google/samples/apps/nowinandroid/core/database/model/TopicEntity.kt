@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.database.model
+package com.yourcompany.partygameapp.core.database.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
+import com.yourcompany.partygameapp.core.model.data.Topic
 
 /**
  * Defines a topic a user may follow.

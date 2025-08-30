@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data
+package com.yourcompany.partygameapp.core.data
 
 import android.util.Log
-import com.google.samples.apps.nowinandroid.core.datastore.ChangeListVersions
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkChangeList
+import com.yourcompany.partygameapp.core.datastore.ChangeListVersions
+import com.yourcompany.partygameapp.core.network.model.NetworkChangeList
 import kotlin.coroutines.cancellation.CancellationException
 
 /**

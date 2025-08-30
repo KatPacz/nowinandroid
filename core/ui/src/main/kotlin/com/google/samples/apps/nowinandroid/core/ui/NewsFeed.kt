@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.ui
+package com.yourcompany.partygameapp.core.ui
 
 import android.content.Context
 import android.net.Uri
@@ -32,13 +32,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Devices
+import androidx.compose.ui.tooling.preview.allDevices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
-import com.google.samples.apps.nowinandroid.core.analytics.LocalAnalyticsHelper
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
-import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
+import com.yourcompany.partygameapp.core.analytics.LocalAnalyticsHelper
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.model.data.UserNewsResource
 
 /**
  * An extension on [LazyListScope] defining a feed with news resources.

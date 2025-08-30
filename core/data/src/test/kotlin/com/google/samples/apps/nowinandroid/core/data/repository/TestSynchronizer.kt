@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.repository
+package com.yourcompany.partygameapp.core.data.repository
 
-import com.google.samples.apps.nowinandroid.core.data.Synchronizer
-import com.google.samples.apps.nowinandroid.core.datastore.ChangeListVersions
-import com.google.samples.apps.nowinandroid.core.datastore.NiaPreferencesDataSource
+import com.yourcompany.partygameapp.core.data.Synchronizer
+import com.yourcompany.partygameapp.core.datastore.ChangeListVersions
+import com.yourcompany.partygameapp.core.datastore.NiaPreferencesDataSource
 
 /**
  * Test synchronizer that delegates to [NiaPreferencesDataSource]

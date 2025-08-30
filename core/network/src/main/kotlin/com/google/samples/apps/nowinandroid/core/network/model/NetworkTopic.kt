@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.network.model
+package com.yourcompany.partygameapp.core.network.model
 
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
+import com.yourcompany.partygameapp.core.model.data.Topic
 import kotlinx.serialization.Serializable
 
 /**

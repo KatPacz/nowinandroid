@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.repository
+package com.yourcompany.partygameapp.core.data.repository
 
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent.Param
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsHelper
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent.Param
+import com.yourcompany.partygameapp.core.analytics.AnalyticsHelper
 
 internal fun AnalyticsHelper.logNewsResourceBookmarkToggled(newsResourceId: String, isBookmarked: Boolean) {
     val eventType = if (isBookmarked) "news_resource_saved" else "news_resource_unsaved"

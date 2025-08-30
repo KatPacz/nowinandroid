@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.bookmarks
+package com.yourcompany.partygameapp.feature.bookmarks
 
 import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.Image
@@ -60,27 +60,27 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaLoadingWheel
-import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.DraggableScrollbar
-import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.rememberDraggableScroller
-import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.scrollbarState
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LocalTintTheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
-import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
-import com.google.samples.apps.nowinandroid.core.ui.NewsFeedUiState
-import com.google.samples.apps.nowinandroid.core.ui.NewsFeedUiState.Loading
-import com.google.samples.apps.nowinandroid.core.ui.NewsFeedUiState.Success
-import com.google.samples.apps.nowinandroid.core.ui.TrackScreenViewEvent
-import com.google.samples.apps.nowinandroid.core.ui.TrackScrollJank
-import com.google.samples.apps.nowinandroid.core.ui.UserNewsResourcePreviewParameterProvider
-import com.google.samples.apps.nowinandroid.core.ui.newsFeed
+import com.yourcompany.partygameapp.core.designsystem.component.NiaLoadingWheel
+import com.yourcompany.partygameapp.core.designsystem.component.scrollbar.DraggableScrollbar
+import com.yourcompany.partygameapp.core.designsystem.component.scrollbar.rememberDraggableScroller
+import com.yourcompany.partygameapp.core.designsystem.component.scrollbar.scrollbarState
+import com.yourcompany.partygameapp.core.designsystem.theme.LocalTintTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.model.data.UserNewsResource
+import com.yourcompany.partygameapp.core.ui.NewsFeedUiState
+import com.yourcompany.partygameapp.core.ui.NewsFeedUiState.Loading
+import com.yourcompany.partygameapp.core.ui.NewsFeedUiState.Success
+import com.yourcompany.partygameapp.core.ui.TrackScreenViewEvent
+import com.yourcompany.partygameapp.core.ui.TrackScrollJank
+import com.yourcompany.partygameapp.core.ui.UserNewsResourcePreviewParameterProvider
+import com.yourcompany.partygameapp.core.ui.newsFeed
 
 @Composable
 internal fun BookmarksRoute(
     onTopicClick: (String) -> Unit,
     onShowSnackbar: suspend (String, String?) -> Boolean,
     modifier: Modifier = Modifier,
-    viewModel: BookmarksViewModel = hiltViewModel(),
+    viewModel: BookmarksViewModel = hilthiltViewModel(),
 ) {
     val feedState by viewModel.feedUiState.collectAsStateWithLifecycle()
     BookmarksScreen(

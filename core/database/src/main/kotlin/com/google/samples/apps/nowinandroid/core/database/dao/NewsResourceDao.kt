@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.database.dao
+package com.yourcompany.partygameapp.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -22,10 +22,10 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
 import androidx.room.Upsert
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceEntity
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceTopicCrossRef
-import com.google.samples.apps.nowinandroid.core.database.model.PopulatedNewsResource
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.database.model.NewsResourceEntity
+import com.yourcompany.partygameapp.core.database.model.NewsResourceTopicCrossRef
+import com.yourcompany.partygameapp.core.database.model.PopulatedNewsResource
+import com.yourcompany.partygameapp.core.model.data.NewsResource
 import kotlinx.coroutines.flow.Flow
 
 /**

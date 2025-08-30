@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.search
+package com.yourcompany.partygameapp.feature.search
 
-import com.google.samples.apps.nowinandroid.core.data.model.RecentSearchQuery
+import com.yourcompany.partygameapp.core.data.model.RecentSearchQuery
 
 sealed interface RecentSearchQueriesUiState {
     data object Loading : RecentSearchQueriesUiState

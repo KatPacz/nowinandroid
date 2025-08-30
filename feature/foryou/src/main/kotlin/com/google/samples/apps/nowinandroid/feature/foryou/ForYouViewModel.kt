@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.foryou
+package com.yourcompany.partygameapp.feature.foryou
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent.Param
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsHelper
-import com.google.samples.apps.nowinandroid.core.data.repository.NewsResourceQuery
-import com.google.samples.apps.nowinandroid.core.data.repository.UserDataRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.UserNewsResourceRepository
-import com.google.samples.apps.nowinandroid.core.data.util.SyncManager
-import com.google.samples.apps.nowinandroid.core.domain.GetFollowableTopicsUseCase
-import com.google.samples.apps.nowinandroid.core.notifications.DEEP_LINK_NEWS_RESOURCE_ID_KEY
-import com.google.samples.apps.nowinandroid.core.ui.NewsFeedUiState
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent.Param
+import com.yourcompany.partygameapp.core.analytics.AnalyticsHelper
+import com.yourcompany.partygameapp.core.data.repository.NewsResourceQuery
+import com.yourcompany.partygameapp.core.data.repository.UserDataRepository
+import com.yourcompany.partygameapp.core.data.repository.UserNewsResourceRepository
+import com.yourcompany.partygameapp.core.data.util.SyncManager
+import com.yourcompany.partygameapp.core.domain.GetFollowableTopicsUseCase
+import com.yourcompany.partygameapp.core.notifications.DEEP_LINK_NEWS_RESOURCE_ID_KEY
+import com.yourcompany.partygameapp.core.ui.NewsFeedUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
@@ -49,7 +49,7 @@ class ForYouViewModel @Inject constructor(
     private val userDataRepository: UserDataRepository,
     userNewsResourceRepository: UserNewsResourceRepository,
     getFollowableTopics: GetFollowableTopicsUseCase,
-) : ViewModel() {
+) : hiltViewModel() {
 
     private val shouldShowOnboarding: Flow<Boolean> =
         userDataRepository.userData.map { !it.shouldHideOnboarding }

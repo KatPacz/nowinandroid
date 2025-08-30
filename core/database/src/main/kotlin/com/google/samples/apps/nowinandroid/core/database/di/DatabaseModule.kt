@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.database.di
+package com.yourcompany.partygameapp.core.database.di
 
 import android.content.Context
 import androidx.room.Room
-import com.google.samples.apps.nowinandroid.core.database.NiaDatabase
+import com.yourcompany.partygameapp.core.database.NiaDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

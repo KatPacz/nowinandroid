@@ -1,0 +1,6 @@
+<!-- FILE: backup_rules.xml -->
+<full-backup-content>
+    <!-- Exclude databases to prevent restoring old schema during testing -->
+    <exclude domain="database" path="party_game_app_db"/>
+    <!-- You can specify what files/data to include or exclude from backups -->
+</full-backup-content>

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.rules
+package com.yourcompany.partygameapp.core.rules
 
 import android.Manifest.permission.POST_NOTIFICATIONS
 import android.os.Build.VERSION.SDK_INT

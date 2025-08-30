@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.testing.repository
+package com.yourcompany.partygameapp.core.testing.repository
 
-import com.google.samples.apps.nowinandroid.core.data.repository.SearchContentsRepository
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
-import com.google.samples.apps.nowinandroid.core.model.data.SearchResult
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
+import com.yourcompany.partygameapp.core.data.repository.SearchContentsRepository
+import com.yourcompany.partygameapp.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.model.data.SearchResult
+import com.yourcompany.partygameapp.core.model.data.Topic
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine

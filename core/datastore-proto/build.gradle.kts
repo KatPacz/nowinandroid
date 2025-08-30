@@ -15,12 +15,12 @@
  */
 
 plugins {
-    alias(libs.plugins.nowinandroid.android.library)
+    alias(libs.plugins.partygameapp.android.library)
     alias(libs.plugins.protobuf)
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.core.datastore.proto"
+    namespace = "com.yourcompany.partygameapp.core.datastore.proto"
 }
 
 // Setup protobuf configuration, generating lite Java and Kotlin classes

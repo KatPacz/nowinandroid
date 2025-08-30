@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.util
+package com.yourcompany.partygameapp.core.data.util
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -23,9 +23,9 @@ import android.content.IntentFilter
 import android.os.Build.VERSION
 import android.os.Build.VERSION_CODES
 import androidx.tracing.trace
-import com.google.samples.apps.nowinandroid.core.network.Dispatcher
-import com.google.samples.apps.nowinandroid.core.network.NiaDispatchers.IO
-import com.google.samples.apps.nowinandroid.core.network.di.ApplicationScope
+import com.yourcompany.partygameapp.core.network.Dispatcher
+import com.yourcompany.partygameapp.core.network.NiaDispatchers.IO
+import com.yourcompany.partygameapp.core.network.di.ApplicationScope
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope

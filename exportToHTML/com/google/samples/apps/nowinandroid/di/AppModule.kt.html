@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>AppModule.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+AppModule.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * Copyright 2025 The Android Open Source Project 
+ * 
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ * 
+ *     https://www.apache.org/licenses/LICENSE-2.0 
+ * 
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License. 
+ */</span>
+
+<span class="s2">package </span><span class="s1">com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">di</span>
+
+<span class="s1">import android</span><span class="s3">.</span><span class="s1">content</span><span class="s3">.</span><span class="s1">Context</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">data</span><span class="s3">.</span><span class="s1">database</span><span class="s3">.</span><span class="s1">AppDatabase</span>
+<span class="s1">import dagger</span><span class="s3">.</span><span class="s1">Module</span>
+<span class="s1">import dagger</span><span class="s3">.</span><span class="s1">Provides</span>
+<span class="s1">import dagger</span><span class="s3">.</span><span class="s1">hilt</span><span class="s3">.</span><span class="s1">InstallIn</span>
+<span class="s1">import dagger</span><span class="s3">.</span><span class="s1">hilt</span><span class="s3">.</span><span class="s1">android</span><span class="s3">.</span><span class="s1">qualifiers</span><span class="s3">.</span><span class="s1">ApplicationContext</span>
+<span class="s1">import dagger</span><span class="s3">.</span><span class="s1">hilt</span><span class="s3">.</span><span class="s1">components</span><span class="s3">.</span><span class="s1">SingletonComponent</span>
+<span class="s1">import javax</span><span class="s3">.</span><span class="s1">inject</span><span class="s3">.</span><span class="s1">Singleton</span>
+
+<span class="s1">@Module</span>
+    <span class="s1">@InstallIn</span><span class="s3">(</span><span class="s1">SingletonComponent::</span><span class="s2">class</span><span class="s3">)</span>
+    <span class="s2">object </span><span class="s1">AppModule </span><span class="s3">{</span>
+
+        <span class="s1">@Provides</span>
+        <span class="s1">@Singleton</span>
+        <span class="s2">fun </span><span class="s1">provideAppDatabase</span><span class="s3">(</span><span class="s1">@ApplicationContext context: Context</span><span class="s3">)</span><span class="s1">: AppDatabase </span><span class="s3">{</span>
+            <span class="s2">return </span><span class="s1">Room</span><span class="s3">.</span><span class="s1">databaseBuilder</span><span class="s3">(</span>
+                <span class="s1">context</span><span class="s3">,</span>
+                <span class="s1">AppDatabase::</span><span class="s2">class</span><span class="s3">.</span><span class="s1">java</span><span class="s3">,</span>
+                <span class="s4">&quot;party_game_app_db&quot;</span>
+            <span class="s3">).</span><span class="s1">build</span><span class="s3">()</span>
+        <span class="s3">}</span>
+
+        <span class="s1">@Provides</span>
+        <span class="s1">@Singleton</span>
+        <span class="s2">fun </span><span class="s1">provideDeckDao</span><span class="s3">(</span><span class="s1">db: AppDatabase</span><span class="s3">) = </span><span class="s1">db</span><span class="s3">.</span><span class="s1">deckDao</span><span class="s3">()</span>
+
+        <span class="s0">// For now, let's create a placeholder repository</span>
+        <span class="s1">@Provides</span>
+        <span class="s1">@Singleton</span>
+        <span class="s2">fun </span><span class="s1">provideDeckRepository</span><span class="s3">(</span><span class="s1">deckDao: DeckDao</span><span class="s3">)</span><span class="s1">: DeckRepository </span><span class="s3">{</span>
+            <span class="s2">return </span><span class="s1">DeckRepository</span><span class="s3">(</span><span class="s1">deckDao</span><span class="s3">)</span>
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+</pre>
+</body>
+</html>

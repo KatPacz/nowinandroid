@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.topic
+package com.yourcompany.partygameapp.feature.topic
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.samples.apps.nowinandroid.core.data.repository.NewsResourceQuery
-import com.google.samples.apps.nowinandroid.core.data.repository.TopicsRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.UserDataRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.UserNewsResourceRepository
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
-import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
-import com.google.samples.apps.nowinandroid.core.result.Result
-import com.google.samples.apps.nowinandroid.core.result.asResult
+import com.yourcompany.partygameapp.core.data.repository.NewsResourceQuery
+import com.yourcompany.partygameapp.core.data.repository.TopicsRepository
+import com.yourcompany.partygameapp.core.data.repository.UserDataRepository
+import com.yourcompany.partygameapp.core.data.repository.UserNewsResourceRepository
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.model.data.Topic
+import com.yourcompany.partygameapp.core.model.data.UserNewsResource
+import com.yourcompany.partygameapp.core.result.Result
+import com.yourcompany.partygameapp.core.result.asResult
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
@@ -45,7 +45,7 @@ class TopicViewModel @AssistedInject constructor(
     topicsRepository: TopicsRepository,
     userNewsResourceRepository: UserNewsResourceRepository,
     @Assisted val topicId: String,
-) : ViewModel() {
+) : hiltViewModel() {
     val topicUiState: StateFlow<TopicUiState> = topicUiState(
         topicId = topicId,
         userDataRepository = userDataRepository,

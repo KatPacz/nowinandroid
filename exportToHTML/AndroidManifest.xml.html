@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>AndroidManifest.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #bcbec4;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+AndroidManifest.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s2">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s2">=&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+<span class="s4">&lt;!--</span>
+     <span class="s4">Copyright 2021 The Android Open Source Project 
+ 
+     Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); 
+     you may not use this file except in compliance with the License. 
+     You may obtain a copy of the License at 
+ 
+          http://www.apache.org/licenses/LICENSE-2.0 
+ 
+     Unless required by applicable law or agreed to in writing, software 
+     distributed under the License is distributed on an &quot;AS IS&quot; BASIS, 
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+     See the License for the specific language governing permissions and 
+     limitations under the License. 
+--&gt;</span>
+<span class="s0">&lt;manifest </span><span class="s1">xmlns:android</span><span class="s2">=&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="s1">xmlns:tools</span><span class="s2">=&quot;http://schemas.android.com/tools&quot;</span><span class="s0">&gt;</span>
+
+    <span class="s0">&lt;uses-permission </span><span class="s1">android:name</span><span class="s2">=&quot;android.permission.INTERNET&quot; </span><span class="s0">/&gt;</span>
+
+    <span class="s4">&lt;!--</span>
+    <span class="s4">Firebase automatically adds these AD_ID and ADSERVICES permissions, even though we don't use them. 
+    If you use these permissions you must declare how you're using them to Google Play, otherwise the 
+    app will be rejected when publishing it. To avoid this we remove the permissions entirely. 
+    --&gt;</span>
+    <span class="s0">&lt;uses-permission </span><span class="s1">android:name</span><span class="s2">=&quot;com.google.android.gms.permission.AD_ID&quot; </span><span class="s1">tools:node</span><span class="s2">=&quot;remove&quot;</span><span class="s0">/&gt;</span>
+    <span class="s0">&lt;uses-permission </span><span class="s1">android:name</span><span class="s2">=&quot;android.permission.ACCESS_ADSERVICES_ATTRIBUTION&quot; </span><span class="s1">tools:node</span><span class="s2">=&quot;remove&quot;</span><span class="s0">/&gt;</span>
+    <span class="s0">&lt;uses-permission </span><span class="s1">android:name</span><span class="s2">=&quot;android.permission.ACCESS_ADSERVICES_AD_ID&quot; </span><span class="s1">tools:node</span><span class="s2">=&quot;remove&quot;</span><span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;application</span>
+        <span class="s1">android:name</span><span class="s2">=&quot;.NiaApplication&quot;</span>
+        <span class="s1">android:allowBackup</span><span class="s2">=&quot;true&quot;</span>
+        <span class="s1">android:enableOnBackInvokedCallback</span><span class="s2">=&quot;true&quot;</span>
+        <span class="s1">android:icon</span><span class="s2">=&quot;@mipmap/ic_launcher&quot;</span>
+        <span class="s1">android:label</span><span class="s2">=&quot;@string/app_name&quot;</span>
+        <span class="s1">android:roundIcon</span><span class="s2">=&quot;@mipmap/ic_launcher_round&quot;</span>
+        <span class="s1">android:supportsRtl</span><span class="s2">=&quot;true&quot;</span>
+        <span class="s1">android:theme</span><span class="s2">=&quot;@style/Theme.Nia.Splash&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;profileable </span><span class="s1">android:shell</span><span class="s2">=&quot;true&quot; </span><span class="s1">tools:targetApi</span><span class="s2">=&quot;q&quot; </span><span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;activity</span>
+            <span class="s1">android:name</span><span class="s2">=&quot;.MainActivity&quot;</span>
+            <span class="s1">android:configChanges</span><span class="s2">=&quot;uiMode&quot;</span>
+            <span class="s1">android:exported</span><span class="s2">=&quot;true&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;intent-filter&gt;</span>
+                <span class="s0">&lt;action </span><span class="s1">android:name</span><span class="s2">=&quot;android.intent.action.MAIN&quot; </span><span class="s0">/&gt;</span>
+                <span class="s0">&lt;category </span><span class="s1">android:name</span><span class="s2">=&quot;android.intent.category.LAUNCHER&quot; </span><span class="s0">/&gt;</span>
+            <span class="s0">&lt;/intent-filter&gt;</span>
+            <span class="s0">&lt;intent-filter&gt;</span>
+                <span class="s0">&lt;action </span><span class="s1">android:name</span><span class="s2">=&quot;android.intent.action.VIEW&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;category </span><span class="s1">android:name</span><span class="s2">=&quot;android.intent.category.DEFAULT&quot; </span><span class="s0">/&gt;</span>
+                <span class="s0">&lt;category </span><span class="s1">android:name</span><span class="s2">=&quot;android.intent.category.BROWSABLE&quot; </span><span class="s0">/&gt;</span>
+
+                <span class="s0">&lt;data </span><span class="s1">android:scheme</span><span class="s2">=&quot;https&quot; </span><span class="s0">/&gt;</span>
+                <span class="s0">&lt;data </span><span class="s1">android:host</span><span class="s2">=&quot;www.partygameapp.apps.samples.google.com&quot; </span><span class="s0">/&gt;</span>
+            <span class="s0">&lt;/intent-filter&gt;</span>
+        <span class="s0">&lt;/activity&gt;</span>
+
+        <span class="s4">&lt;!-- Disable Firebase analytics by default. This setting is overwritten for the `prod` 
+        flavor --&gt;</span>
+        <span class="s0">&lt;meta-data </span><span class="s1">android:name</span><span class="s2">=&quot;firebase_analytics_collection_deactivated&quot; </span><span class="s1">android:value</span><span class="s2">=&quot;true&quot; </span><span class="s0">/&gt;</span>
+        <span class="s4">&lt;!-- Disable collection of AD_ID for all build variants --&gt;</span>
+        <span class="s0">&lt;meta-data </span><span class="s1">android:name</span><span class="s2">=&quot;google_analytics_adid_collection_enabled&quot; </span><span class="s1">android:value</span><span class="s2">=&quot;false&quot; </span><span class="s0">/&gt;</span>
+        <span class="s4">&lt;!-- Firebase automatically adds the following property which we don't use so remove it --&gt;</span>
+        <span class="s0">&lt;property</span>
+            <span class="s1">android:name</span><span class="s2">=&quot;android.adservices.AD_SERVICES_CONFIG&quot;</span>
+            <span class="s1">tools:node</span><span class="s2">=&quot;remove&quot; </span><span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;/application&gt;</span>
+
+<span class="s0">&lt;/manifest&gt;</span>
+</pre>
+</body>
+</html>

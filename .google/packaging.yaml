@@ -43,6 +43,6 @@ solutions:
   - JetpackWorkManager
   - JetpackLifecycle
 languages:    [Kotlin]
-github:       android/nowinandroid
+github:       android/partygameapp
 level:        ADVANCED
 license: apache2

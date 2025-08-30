@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.designsystem.component
+package com.yourcompany.partygameapp.core.designsystem.component
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
@@ -33,8 +33,8 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.designsystem.icon.NiaIcons
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
 
 /**
  * Now in Android filled button with generic content slot. Wraps Material 3 [Button].

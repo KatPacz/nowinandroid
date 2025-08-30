@@ -16,7 +16,7 @@
 -->
 <resources>
     <!-- Allow users to distinguish between build variants by having a different background color
-        for the launcher icon. See https://github.com/android/nowinandroid/pull/989. -->
+        for the launcher icon. See https://github.com/android/partygameapp/pull/989. -->
     <color name="ic_launcher_background_tint">#000000</color>
     <color name="ic_launcher_foreground_tint">#FF006780</color>
 </resources>

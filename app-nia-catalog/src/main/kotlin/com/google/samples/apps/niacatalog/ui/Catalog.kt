@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.niacatalog.ui
+package com.yourcompany.niacatalog.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -38,19 +38,19 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaButton
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaFilterChip
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaIconToggleButton
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaNavigationBar
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaNavigationBarItem
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaOutlinedButton
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaTab
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaTabRow
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaTextButton
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaTopicTag
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaViewToggleButton
-import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.designsystem.component.NiaButton
+import com.yourcompany.partygameapp.core.designsystem.component.NiaFilterChip
+import com.yourcompany.partygameapp.core.designsystem.component.NiaIconToggleButton
+import com.yourcompany.partygameapp.core.designsystem.component.NiaNavigationBar
+import com.yourcompany.partygameapp.core.designsystem.component.NiaNavigationBarItem
+import com.yourcompany.partygameapp.core.designsystem.component.NiaOutlinedButton
+import com.yourcompany.partygameapp.core.designsystem.component.NiaTab
+import com.yourcompany.partygameapp.core.designsystem.component.NiaTabRow
+import com.yourcompany.partygameapp.core.designsystem.component.NiaTextButton
+import com.yourcompany.partygameapp.core.designsystem.component.NiaTopicTag
+import com.yourcompany.partygameapp.core.designsystem.component.NiaViewToggleButton
+import com.yourcompany.partygameapp.core.designsystem.icon.NiaIcons
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
 
 /**
  * Now in Android component catalog.

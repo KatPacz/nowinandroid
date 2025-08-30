@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.domain
+package com.yourcompany.partygameapp.core.domain
 
-import com.google.samples.apps.nowinandroid.core.data.repository.TopicsRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.UserDataRepository
-import com.google.samples.apps.nowinandroid.core.domain.TopicSortField.NAME
-import com.google.samples.apps.nowinandroid.core.domain.TopicSortField.NONE
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.data.repository.TopicsRepository
+import com.yourcompany.partygameapp.core.data.repository.UserDataRepository
+import com.yourcompany.partygameapp.core.domain.TopicSortField.NAME
+import com.yourcompany.partygameapp.core.domain.TopicSortField.NONE
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import javax.inject.Inject

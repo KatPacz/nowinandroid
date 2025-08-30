@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.sync.workers
+package com.yourcompany.partygameapp.sync.workers
 
 import android.content.Context
 import androidx.hilt.work.HiltWorkerFactory

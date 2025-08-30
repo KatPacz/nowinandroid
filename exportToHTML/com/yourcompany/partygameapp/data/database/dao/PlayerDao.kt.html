@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>PlayerDao.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+.ln { color: #4b5059; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+PlayerDao.kt</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">// FILE: PlayerDao.kt</span>
+<a name="l2"><span class="ln">2    </span></a>
+<a name="l3"><span class="ln">3    </span></a><span class="s2">package </span><span class="s1">com</span><span class="s3">.</span><span class="s1">yourcompany</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">data</span><span class="s3">.</span><span class="s1">database</span><span class="s3">.</span><span class="s1">dao</span>
+<a name="l4"><span class="ln">4    </span></a>
+<a name="l5"><span class="ln">5    </span></a><span class="s1">import androidx</span><span class="s3">.</span><span class="s1">room</span><span class="s3">.*</span>
+<a name="l6"><span class="ln">6    </span></a><span class="s1">import com</span><span class="s3">.</span><span class="s1">yourcompany</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">data</span><span class="s3">.</span><span class="s1">database</span><span class="s3">.</span><span class="s1">entity</span><span class="s3">.</span><span class="s1">PlayerEntity</span>
+<a name="l7"><span class="ln">7    </span></a><span class="s1">import kotlinx</span><span class="s3">.</span><span class="s1">coroutines</span><span class="s3">.</span><span class="s1">flow</span><span class="s3">.</span><span class="s1">Flow</span>
+<a name="l8"><span class="ln">8    </span></a>
+<a name="l9"><span class="ln">9    </span></a><span class="s1">@Dao</span>
+<a name="l10"><span class="ln">10   </span></a><span class="s2">interface </span><span class="s1">PlayerDao </span><span class="s3">{</span>
+<a name="l11"><span class="ln">11   </span></a>    <span class="s1">@Query</span><span class="s3">(</span><span class="s4">&quot;SELECT * FROM players ORDER BY name ASC&quot;</span><span class="s3">)</span>
+<a name="l12"><span class="ln">12   </span></a>    <span class="s2">fun </span><span class="s1">getAllPlayers</span><span class="s3">()</span><span class="s1">: Flow</span><span class="s3">&lt;</span><span class="s1">List</span><span class="s3">&lt;</span><span class="s1">PlayerEntity</span><span class="s3">&gt;&gt;</span>
+<a name="l13"><span class="ln">13   </span></a>
+<a name="l14"><span class="ln">14   </span></a>    <span class="s1">@Insert</span>
+<a name="l15"><span class="ln">15   </span></a>    <span class="s1">suspend </span><span class="s2">fun </span><span class="s1">insertPlayer</span><span class="s3">(</span><span class="s1">player: PlayerEntity</span><span class="s3">)</span>
+<a name="l16"><span class="ln">16   </span></a>
+<a name="l17"><span class="ln">17   </span></a>    <span class="s1">@Query</span><span class="s3">(</span><span class="s4">&quot;SELECT * FROM players WHERE id = :playerId LIMIT 1&quot;</span><span class="s3">)</span>
+<a name="l18"><span class="ln">18   </span></a>    <span class="s1">suspend </span><span class="s2">fun </span><span class="s1">getPlayerById</span><span class="s3">(</span><span class="s1">playerId: Int</span><span class="s3">)</span><span class="s1">: PlayerEntity?</span>
+<a name="l19"><span class="ln">19   </span></a>
+<a name="l20"><span class="ln">20   </span></a>    <span class="s1">@Query</span><span class="s3">(</span><span class="s4">&quot;&quot;&quot;</span>
+<a name="l21"><span class="ln">21   </span></a>        <span class="s4">UPDATE players</span>
+<a name="l22"><span class="ln">22   </span></a>        <span class="s4">SET</span>
+<a name="l23"><span class="ln">23   </span></a>            <span class="s4">gamesPlayed = gamesPlayed + 1,</span>
+<a name="l24"><span class="ln">24   </span></a>            <span class="s4">totalCorrectGuesses = totalCorrectGuesses + :correctGuesses,</span>
+<a name="l25"><span class="ln">25   </span></a>            <span class="s4">totalPoints = totalPoints + :score</span>
+<a name="l26"><span class="ln">26   </span></a>        <span class="s4">WHERE id = :playerId</span>
+<a name="l27"><span class="ln">27   </span></a>    <span class="s4">&quot;&quot;&quot;</span><span class="s3">)</span>
+<a name="l28"><span class="ln">28   </span></a>    <span class="s1">suspend </span><span class="s2">fun </span><span class="s1">updatePlayerStats</span><span class="s3">(</span><span class="s1">playerId: Int</span><span class="s3">, </span><span class="s1">correctGuesses: Int</span><span class="s3">, </span><span class="s1">score: Int</span><span class="s3">)</span>
+<a name="l29"><span class="ln">29   </span></a><span class="s3">}</span></pre>
+</body>
+</html>

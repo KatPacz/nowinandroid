@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.sync.workers
+package com.yourcompany.partygameapp.sync.workers
 
 import android.content.Context
 import androidx.hilt.work.HiltWorker
@@ -24,18 +24,18 @@ import androidx.work.ForegroundInfo
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.OutOfQuotaPolicy
 import androidx.work.WorkerParameters
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsHelper
-import com.google.samples.apps.nowinandroid.core.data.Synchronizer
-import com.google.samples.apps.nowinandroid.core.data.repository.NewsRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.SearchContentsRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.TopicsRepository
-import com.google.samples.apps.nowinandroid.core.datastore.ChangeListVersions
-import com.google.samples.apps.nowinandroid.core.datastore.NiaPreferencesDataSource
-import com.google.samples.apps.nowinandroid.core.network.Dispatcher
-import com.google.samples.apps.nowinandroid.core.network.NiaDispatchers.IO
-import com.google.samples.apps.nowinandroid.sync.initializers.SyncConstraints
-import com.google.samples.apps.nowinandroid.sync.initializers.syncForegroundInfo
-import com.google.samples.apps.nowinandroid.sync.status.SyncSubscriber
+import com.yourcompany.partygameapp.core.analytics.AnalyticsHelper
+import com.yourcompany.partygameapp.core.data.Synchronizer
+import com.yourcompany.partygameapp.core.data.repository.NewsRepository
+import com.yourcompany.partygameapp.core.data.repository.SearchContentsRepository
+import com.yourcompany.partygameapp.core.data.repository.TopicsRepository
+import com.yourcompany.partygameapp.core.datastore.ChangeListVersions
+import com.yourcompany.partygameapp.core.datastore.NiaPreferencesDataSource
+import com.yourcompany.partygameapp.core.network.Dispatcher
+import com.yourcompany.partygameapp.core.network.NiaDispatchers.IO
+import com.yourcompany.partygameapp.sync.initializers.SyncConstraints
+import com.yourcompany.partygameapp.sync.initializers.syncForegroundInfo
+import com.yourcompany.partygameapp.sync.status.SyncSubscriber
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.CoroutineDispatcher

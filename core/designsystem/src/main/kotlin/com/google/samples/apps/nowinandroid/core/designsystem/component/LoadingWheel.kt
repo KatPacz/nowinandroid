@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.designsystem.component
+package com.yourcompany.partygameapp.core.designsystem.component
 
 import androidx.compose.animation.animateColor
 import androidx.compose.animation.core.Animatable
@@ -47,7 +47,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
 import kotlinx.coroutines.launch
 
 @Composable

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.baselineprofile
+package com.yourcompany.partygameapp.baselineprofile
 
 import androidx.benchmark.macro.junit4.BaselineProfileRule
-import com.google.samples.apps.nowinandroid.PACKAGE_NAME
-import com.google.samples.apps.nowinandroid.foryou.forYouScrollFeedDownUp
-import com.google.samples.apps.nowinandroid.foryou.forYouSelectTopics
-import com.google.samples.apps.nowinandroid.foryou.forYouWaitForContent
-import com.google.samples.apps.nowinandroid.startActivityAndAllowNotifications
+import com.yourcompany.partygameapp.PACKAGE_NAME
+import com.yourcompany.partygameapp.foryou.forYouScrollFeedDownUp
+import com.yourcompany.partygameapp.foryou.forYouSelectTopics
+import com.yourcompany.partygameapp.foryou.forYouWaitForContent
+import com.yourcompany.partygameapp.startActivityAndAllowNotifications
 import org.junit.Rule
 import org.junit.Test
 

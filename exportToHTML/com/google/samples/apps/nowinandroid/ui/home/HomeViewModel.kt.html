@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>HomeViewModel.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+HomeViewModel.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * Copyright 2025 The Android Open Source Project 
+ * 
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ * 
+ *     https://www.apache.org/licenses/LICENSE-2.0 
+ * 
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License. 
+ */</span>
+
+<span class="s2">package </span><span class="s1">com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">ui</span><span class="s3">.</span><span class="s1">home</span>
+
+<span class="s1">import dagger</span><span class="s3">.</span><span class="s1">hilt</span><span class="s3">.</span><span class="s1">android</span><span class="s3">.</span><span class="s1">lifecycle</span><span class="s3">.</span><span class="s1">HiltViewModel</span>
+<span class="s1">import jakarta</span><span class="s3">.</span><span class="s1">inject</span><span class="s3">.</span><span class="s1">Inject</span>
+
+<span class="s1">@HiltViewModel</span>
+<span class="s2">class </span><span class="s1">HomeViewModel @Inject constructor</span><span class="s3">(</span>
+    <span class="s1">private </span><span class="s2">val </span><span class="s1">deckRepository: DeckRepository</span>
+<span class="s3">) </span><span class="s1">: ViewModel</span><span class="s3">() {</span>
+
+    <span class="s0">// Using StateFlow to hold the UI state</span>
+    <span class="s1">private </span><span class="s2">val </span><span class="s1">_uiState </span><span class="s3">= </span><span class="s1">MutableStateFlow</span><span class="s3">&lt;</span><span class="s1">HomeScreenState</span><span class="s3">&gt;(</span><span class="s1">HomeScreenState</span><span class="s3">.</span><span class="s1">Loading</span><span class="s3">)</span>
+    <span class="s2">val </span><span class="s1">uiState: StateFlow</span><span class="s3">&lt;</span><span class="s1">HomeScreenState</span><span class="s3">&gt; = </span><span class="s1">_uiState</span><span class="s3">.</span><span class="s1">asStateFlow</span><span class="s3">()</span>
+
+    <span class="s1">init </span><span class="s3">{</span>
+        <span class="s1">viewModelScope</span><span class="s3">.</span><span class="s1">launch </span><span class="s3">{</span>
+            <span class="s0">// For now, let's add some mock data if the DB is empty</span>
+            <span class="s0">// In the next phase, we'll load this from assets</span>
+            <span class="s1">deckRepository</span><span class="s3">.</span><span class="s1">getAllDecks</span><span class="s3">().</span><span class="s1">collect </span><span class="s3">{ </span><span class="s1">decks </span><span class="s3">-&gt;</span>
+                <span class="s1">_uiState</span><span class="s3">.</span><span class="s1">value </span><span class="s3">= </span><span class="s1">HomeScreenState</span><span class="s3">.</span><span class="s1">Success</span><span class="s3">(</span><span class="s1">decks</span><span class="s3">)</span>
+            <span class="s3">}</span>
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+<span class="s3">}</span>
+
+<span class="s0">// Defines the possible states of our screen</span>
+<span class="s1">sealed </span><span class="s2">interface </span><span class="s1">HomeScreenState </span><span class="s3">{</span>
+    <span class="s2">object </span><span class="s1">Loading : HomeScreenState</span>
+    <span class="s1">data </span><span class="s2">class </span><span class="s1">Success</span><span class="s3">(</span><span class="s2">val </span><span class="s1">decks: List</span><span class="s3">&lt;</span><span class="s1">DeckEntity</span><span class="s3">&gt;) </span><span class="s1">: HomeScreenState</span>
+    <span class="s1">data </span><span class="s2">class </span><span class="s1">Error</span><span class="s3">(</span><span class="s2">val </span><span class="s1">message: String</span><span class="s3">) </span><span class="s1">: HomeScreenState</span>
+<span class="s3">}</span></pre>
+</body>
+</html>

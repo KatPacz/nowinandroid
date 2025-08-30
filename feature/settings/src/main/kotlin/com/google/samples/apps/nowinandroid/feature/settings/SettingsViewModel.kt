@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.settings
+package com.yourcompany.partygameapp.feature.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.samples.apps.nowinandroid.core.data.repository.UserDataRepository
-import com.google.samples.apps.nowinandroid.core.model.data.DarkThemeConfig
-import com.google.samples.apps.nowinandroid.core.model.data.ThemeBrand
-import com.google.samples.apps.nowinandroid.feature.settings.SettingsUiState.Loading
-import com.google.samples.apps.nowinandroid.feature.settings.SettingsUiState.Success
+import com.yourcompany.partygameapp.core.data.repository.UserDataRepository
+import com.yourcompany.partygameapp.core.model.data.DarkThemeConfig
+import com.yourcompany.partygameapp.core.model.data.ThemeBrand
+import com.yourcompany.partygameapp.feature.settings.SettingsUiState.Loading
+import com.yourcompany.partygameapp.feature.settings.SettingsUiState.Success
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted.Companion.WhileSubscribed
 import kotlinx.coroutines.flow.StateFlow
@@ -35,7 +35,7 @@ import kotlin.time.Duration.Companion.seconds
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
     private val userDataRepository: UserDataRepository,
-) : ViewModel() {
+) : hiltViewModel() {
     val settingsUiState: StateFlow<SettingsUiState> =
         userDataRepository.userData
             .map { userData ->

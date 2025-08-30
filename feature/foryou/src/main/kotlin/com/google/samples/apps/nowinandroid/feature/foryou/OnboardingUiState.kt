@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.foryou
+package com.yourcompany.partygameapp.feature.foryou
 
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
 
 /**
  * A sealed hierarchy describing the onboarding state for the for you screen.

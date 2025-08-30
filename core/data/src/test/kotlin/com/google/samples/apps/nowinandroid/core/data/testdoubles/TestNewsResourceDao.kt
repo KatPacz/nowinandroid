@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.testdoubles
+package com.yourcompany.partygameapp.core.data.testdoubles
 
-import com.google.samples.apps.nowinandroid.core.database.dao.NewsResourceDao
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceEntity
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceTopicCrossRef
-import com.google.samples.apps.nowinandroid.core.database.model.PopulatedNewsResource
-import com.google.samples.apps.nowinandroid.core.database.model.TopicEntity
+import com.yourcompany.partygameapp.core.database.dao.NewsResourceDao
+import com.yourcompany.partygameapp.core.database.model.NewsResourceEntity
+import com.yourcompany.partygameapp.core.database.model.NewsResourceTopicCrossRef
+import com.yourcompany.partygameapp.core.database.model.PopulatedNewsResource
+import com.yourcompany.partygameapp.core.database.model.TopicEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.map

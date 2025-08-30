@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.util
+package com.yourcompany.partygameapp.core.data.util
 
 import kotlinx.coroutines.flow.Flow
 

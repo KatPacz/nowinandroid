@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.test
+package com.yourcompany.partygameapp.core.data.test
 
-import com.google.samples.apps.nowinandroid.core.data.di.DataModule
-import com.google.samples.apps.nowinandroid.core.data.repository.NewsRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.RecentSearchRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.SearchContentsRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.TopicsRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.UserDataRepository
-import com.google.samples.apps.nowinandroid.core.data.test.repository.FakeNewsRepository
-import com.google.samples.apps.nowinandroid.core.data.test.repository.FakeRecentSearchRepository
-import com.google.samples.apps.nowinandroid.core.data.test.repository.FakeSearchContentsRepository
-import com.google.samples.apps.nowinandroid.core.data.test.repository.FakeTopicsRepository
-import com.google.samples.apps.nowinandroid.core.data.test.repository.FakeUserDataRepository
-import com.google.samples.apps.nowinandroid.core.data.util.NetworkMonitor
-import com.google.samples.apps.nowinandroid.core.data.util.TimeZoneMonitor
+import com.yourcompany.partygameapp.core.data.di.DataModule
+import com.yourcompany.partygameapp.core.data.repository.NewsRepository
+import com.yourcompany.partygameapp.core.data.repository.RecentSearchRepository
+import com.yourcompany.partygameapp.core.data.repository.SearchContentsRepository
+import com.yourcompany.partygameapp.core.data.repository.TopicsRepository
+import com.yourcompany.partygameapp.core.data.repository.UserDataRepository
+import com.yourcompany.partygameapp.core.data.test.repository.FakeNewsRepository
+import com.yourcompany.partygameapp.core.data.test.repository.FakeRecentSearchRepository
+import com.yourcompany.partygameapp.core.data.test.repository.FakeSearchContentsRepository
+import com.yourcompany.partygameapp.core.data.test.repository.FakeTopicsRepository
+import com.yourcompany.partygameapp.core.data.test.repository.FakeUserDataRepository
+import com.yourcompany.partygameapp.core.data.util.NetworkMonitor
+import com.yourcompany.partygameapp.core.data.util.TimeZoneMonitor
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.components.SingletonComponent

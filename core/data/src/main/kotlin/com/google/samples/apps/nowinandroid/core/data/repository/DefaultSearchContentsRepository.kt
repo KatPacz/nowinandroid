@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.repository
+package com.yourcompany.partygameapp.core.data.repository
 
-import com.google.samples.apps.nowinandroid.core.database.dao.NewsResourceDao
-import com.google.samples.apps.nowinandroid.core.database.dao.NewsResourceFtsDao
-import com.google.samples.apps.nowinandroid.core.database.dao.TopicDao
-import com.google.samples.apps.nowinandroid.core.database.dao.TopicFtsDao
-import com.google.samples.apps.nowinandroid.core.database.model.PopulatedNewsResource
-import com.google.samples.apps.nowinandroid.core.database.model.asExternalModel
-import com.google.samples.apps.nowinandroid.core.database.model.asFtsEntity
-import com.google.samples.apps.nowinandroid.core.model.data.SearchResult
-import com.google.samples.apps.nowinandroid.core.network.Dispatcher
-import com.google.samples.apps.nowinandroid.core.network.NiaDispatchers.IO
+import com.yourcompany.partygameapp.core.database.dao.NewsResourceDao
+import com.yourcompany.partygameapp.core.database.dao.NewsResourceFtsDao
+import com.yourcompany.partygameapp.core.database.dao.TopicDao
+import com.yourcompany.partygameapp.core.database.dao.TopicFtsDao
+import com.yourcompany.partygameapp.core.database.model.PopulatedNewsResource
+import com.yourcompany.partygameapp.core.database.model.asExternalModel
+import com.yourcompany.partygameapp.core.database.model.asFtsEntity
+import com.yourcompany.partygameapp.core.model.data.SearchResult
+import com.yourcompany.partygameapp.core.network.Dispatcher
+import com.yourcompany.partygameapp.core.network.NiaDispatchers.IO
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine

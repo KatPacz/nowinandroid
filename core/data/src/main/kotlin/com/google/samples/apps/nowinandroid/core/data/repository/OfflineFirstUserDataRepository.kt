@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.repository
+package com.yourcompany.partygameapp.core.data.repository
 
 import androidx.annotation.VisibleForTesting
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsHelper
-import com.google.samples.apps.nowinandroid.core.datastore.NiaPreferencesDataSource
-import com.google.samples.apps.nowinandroid.core.model.data.DarkThemeConfig
-import com.google.samples.apps.nowinandroid.core.model.data.ThemeBrand
-import com.google.samples.apps.nowinandroid.core.model.data.UserData
+import com.yourcompany.partygameapp.core.analytics.AnalyticsHelper
+import com.yourcompany.partygameapp.core.datastore.NiaPreferencesDataSource
+import com.yourcompany.partygameapp.core.model.data.DarkThemeConfig
+import com.yourcompany.partygameapp.core.model.data.ThemeBrand
+import com.yourcompany.partygameapp.core.model.data.UserData
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

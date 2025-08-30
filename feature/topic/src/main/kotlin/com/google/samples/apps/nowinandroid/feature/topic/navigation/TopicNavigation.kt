@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.topic.navigation
+package com.yourcompany.partygameapp.feature.topic.navigation
 
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -22,8 +22,8 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptionsBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import com.google.samples.apps.nowinandroid.feature.topic.TopicScreen
-import com.google.samples.apps.nowinandroid.feature.topic.TopicViewModel
+import com.yourcompany.partygameapp.feature.topic.TopicScreen
+import com.yourcompany.partygameapp.feature.topic.TopicViewModel
 import kotlinx.serialization.Serializable
 
 @Serializable data class TopicRoute(val id: String)

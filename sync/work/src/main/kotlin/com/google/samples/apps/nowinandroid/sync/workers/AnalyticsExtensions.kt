@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.sync.workers
+package com.yourcompany.partygameapp.sync.workers
 
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsHelper
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent
+import com.yourcompany.partygameapp.core.analytics.AnalyticsHelper
 
 internal fun AnalyticsHelper.logSyncStarted() =
     logEvent(

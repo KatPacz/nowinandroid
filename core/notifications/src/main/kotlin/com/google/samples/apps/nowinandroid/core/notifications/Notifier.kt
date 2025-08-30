@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.notifications
+package com.yourcompany.partygameapp.core.notifications
 
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.model.data.NewsResource
 
 /**
  * Interface for creating notifications in the app

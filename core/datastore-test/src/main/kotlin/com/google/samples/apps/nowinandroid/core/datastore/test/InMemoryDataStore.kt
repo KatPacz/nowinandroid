@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.datastore.test
+package com.yourcompany.partygameapp.core.datastore.test
 
 import androidx.datastore.core.DataStore
 import kotlinx.coroutines.flow.MutableStateFlow

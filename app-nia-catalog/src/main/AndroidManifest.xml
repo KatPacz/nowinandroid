@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NiaCatalog">
         <activity
-            android:name="com.google.samples.apps.niacatalog.NiaCatalogActivity"
+            android:name="com.yourcompany.niacatalog.NiaCatalogActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.NiaCatalog">

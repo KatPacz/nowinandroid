@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.interests
+package com.yourcompany.partygameapp.feature.interests
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
-import com.google.samples.apps.nowinandroid.core.data.repository.UserDataRepository
-import com.google.samples.apps.nowinandroid.core.domain.GetFollowableTopicsUseCase
-import com.google.samples.apps.nowinandroid.core.domain.TopicSortField
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.feature.interests.navigation.InterestsRoute
+import com.yourcompany.partygameapp.core.data.repository.UserDataRepository
+import com.yourcompany.partygameapp.core.domain.GetFollowableTopicsUseCase
+import com.yourcompany.partygameapp.core.domain.TopicSortField
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.feature.interests.navigation.InterestsRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -38,7 +38,7 @@ class InterestsViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle,
     val userDataRepository: UserDataRepository,
     getFollowableTopics: GetFollowableTopicsUseCase,
-) : ViewModel() {
+) : hiltViewModel() {
 
     // Key used to save and retrieve the currently selected topic id from saved state.
     private val selectedTopicIdKey = "selectedTopicIdKey"

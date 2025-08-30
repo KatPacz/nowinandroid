@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.search
+package com.yourcompany.partygameapp.feature.search
 
 import androidx.lifecycle.SavedStateHandle
-import com.google.samples.apps.nowinandroid.core.analytics.NoOpAnalyticsHelper
-import com.google.samples.apps.nowinandroid.core.domain.GetRecentSearchQueriesUseCase
-import com.google.samples.apps.nowinandroid.core.domain.GetSearchContentsUseCase
-import com.google.samples.apps.nowinandroid.core.testing.data.newsResourcesTestData
-import com.google.samples.apps.nowinandroid.core.testing.data.topicsTestData
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestRecentSearchRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestSearchContentsRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestUserDataRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.emptyUserData
-import com.google.samples.apps.nowinandroid.core.testing.util.MainDispatcherRule
-import com.google.samples.apps.nowinandroid.feature.search.RecentSearchQueriesUiState.Success
-import com.google.samples.apps.nowinandroid.feature.search.SearchResultUiState.EmptyQuery
-import com.google.samples.apps.nowinandroid.feature.search.SearchResultUiState.Loading
-import com.google.samples.apps.nowinandroid.feature.search.SearchResultUiState.SearchNotReady
+import com.yourcompany.partygameapp.core.analytics.NoOpAnalyticsHelper
+import com.yourcompany.partygameapp.core.domain.GetRecentSearchQueriesUseCase
+import com.yourcompany.partygameapp.core.domain.GetSearchContentsUseCase
+import com.yourcompany.partygameapp.core.testing.data.newsResourcesTestData
+import com.yourcompany.partygameapp.core.testing.data.topicsTestData
+import com.yourcompany.partygameapp.core.testing.repository.TestRecentSearchRepository
+import com.yourcompany.partygameapp.core.testing.repository.TestSearchContentsRepository
+import com.yourcompany.partygameapp.core.testing.repository.TestUserDataRepository
+import com.yourcompany.partygameapp.core.testing.repository.emptyUserData
+import com.yourcompany.partygameapp.core.testing.util.MainDispatcherRule
+import com.yourcompany.partygameapp.feature.search.RecentSearchQueriesUiState.Success
+import com.yourcompany.partygameapp.feature.search.SearchResultUiState.EmptyQuery
+import com.yourcompany.partygameapp.feature.search.SearchResultUiState.Loading
+import com.yourcompany.partygameapp.feature.search.SearchResultUiState.SearchNotReady
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.network.demo
+package com.yourcompany.partygameapp.core.network.demo
 
 import JvmUnitTestDemoAssetManager
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkNewsResource
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkTopic
+import com.yourcompany.partygameapp.core.network.model.NetworkNewsResource
+import com.yourcompany.partygameapp.core.network.model.NetworkTopic
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import kotlinx.datetime.LocalDateTime

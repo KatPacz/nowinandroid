@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.foryou
+package com.yourcompany.partygameapp.feature.foryou
 
 import android.net.Uri
 import android.os.Build.VERSION
@@ -85,30 +85,30 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.PermissionStatus.Denied
 import com.google.accompanist.permissions.rememberPermissionState
-import com.google.samples.apps.nowinandroid.core.designsystem.component.DynamicAsyncImage
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaButton
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaIconToggleButton
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaOverlayLoadingWheel
-import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.DecorativeScrollbar
-import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.DraggableScrollbar
-import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.rememberDraggableScroller
-import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.scrollbarState
-import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
-import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
-import com.google.samples.apps.nowinandroid.core.ui.DevicePreviews
-import com.google.samples.apps.nowinandroid.core.ui.NewsFeedUiState
-import com.google.samples.apps.nowinandroid.core.ui.TrackScreenViewEvent
-import com.google.samples.apps.nowinandroid.core.ui.TrackScrollJank
-import com.google.samples.apps.nowinandroid.core.ui.UserNewsResourcePreviewParameterProvider
-import com.google.samples.apps.nowinandroid.core.ui.launchCustomChromeTab
-import com.google.samples.apps.nowinandroid.core.ui.newsFeed
+import com.yourcompany.partygameapp.core.designsystem.component.DynamicAsyncImage
+import com.yourcompany.partygameapp.core.designsystem.component.NiaButton
+import com.yourcompany.partygameapp.core.designsystem.component.NiaIconToggleButton
+import com.yourcompany.partygameapp.core.designsystem.component.NiaOverlayLoadingWheel
+import com.yourcompany.partygameapp.core.designsystem.component.scrollbar.DecorativeScrollbar
+import com.yourcompany.partygameapp.core.designsystem.component.scrollbar.DraggableScrollbar
+import com.yourcompany.partygameapp.core.designsystem.component.scrollbar.rememberDraggableScroller
+import com.yourcompany.partygameapp.core.designsystem.component.scrollbar.scrollbarState
+import com.yourcompany.partygameapp.core.designsystem.icon.NiaIcons
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.model.data.UserNewsResource
+import com.yourcompany.partygameapp.core.ui.DevicePreviews
+import com.yourcompany.partygameapp.core.ui.NewsFeedUiState
+import com.yourcompany.partygameapp.core.ui.TrackScreenViewEvent
+import com.yourcompany.partygameapp.core.ui.TrackScrollJank
+import com.yourcompany.partygameapp.core.ui.UserNewsResourcePreviewParameterProvider
+import com.yourcompany.partygameapp.core.ui.launchCustomChromeTab
+import com.yourcompany.partygameapp.core.ui.newsFeed
 
 @Composable
 internal fun ForYouScreen(
     onTopicClick: (String) -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: ForYouViewModel = hiltViewModel(),
+    viewModel: ForYouViewModel = hilthiltViewModel(),
 ) {
     val onboardingUiState by viewModel.onboardingUiState.collectAsStateWithLifecycle()
     val feedState by viewModel.feedState.collectAsStateWithLifecycle()

@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.repository
+package com.yourcompany.partygameapp.core.data.repository
 
-import com.google.samples.apps.nowinandroid.core.data.Synchronizer
-import com.google.samples.apps.nowinandroid.core.data.changeListSync
-import com.google.samples.apps.nowinandroid.core.data.model.asEntity
-import com.google.samples.apps.nowinandroid.core.database.dao.TopicDao
-import com.google.samples.apps.nowinandroid.core.database.model.TopicEntity
-import com.google.samples.apps.nowinandroid.core.database.model.asExternalModel
-import com.google.samples.apps.nowinandroid.core.datastore.ChangeListVersions
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
-import com.google.samples.apps.nowinandroid.core.network.NiaNetworkDataSource
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkTopic
+import com.yourcompany.partygameapp.core.data.Synchronizer
+import com.yourcompany.partygameapp.core.data.changeListSync
+import com.yourcompany.partygameapp.core.data.model.asEntity
+import com.yourcompany.partygameapp.core.database.dao.TopicDao
+import com.yourcompany.partygameapp.core.database.model.TopicEntity
+import com.yourcompany.partygameapp.core.database.model.asExternalModel
+import com.yourcompany.partygameapp.core.datastore.ChangeListVersions
+import com.yourcompany.partygameapp.core.model.data.Topic
+import com.yourcompany.partygameapp.core.network.NiaNetworkDataSource
+import com.yourcompany.partygameapp.core.network.model.NetworkTopic
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject

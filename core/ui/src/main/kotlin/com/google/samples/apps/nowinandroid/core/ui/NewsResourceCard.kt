@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.ui
+package com.yourcompany.partygameapp.core.ui
 
 import android.content.ClipData
 import android.os.Build.VERSION
@@ -66,14 +66,14 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImagePainter
 import coil.compose.rememberAsyncImagePainter
-import com.google.samples.apps.nowinandroid.core.designsystem.R.drawable
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaIconToggleButton
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaTopicTag
-import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
-import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
+import com.yourcompany.partygameapp.core.designsystem.R.drawable
+import com.yourcompany.partygameapp.core.designsystem.component.NiaIconToggleButton
+import com.yourcompany.partygameapp.core.designsystem.component.NiaTopicTag
+import com.yourcompany.partygameapp.core.designsystem.icon.NiaIcons
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.model.data.UserNewsResource
 import kotlinx.datetime.Instant
 import kotlinx.datetime.toJavaInstant
 import kotlinx.datetime.toJavaZoneId

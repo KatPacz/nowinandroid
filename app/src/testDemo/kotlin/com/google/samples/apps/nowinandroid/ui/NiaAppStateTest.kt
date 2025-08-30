@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.ui
+package com.yourcompany.partygameapp.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -26,11 +26,11 @@ import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.compose.composable
 import androidx.navigation.createGraph
 import androidx.navigation.testing.TestNavHostController
-import com.google.samples.apps.nowinandroid.core.data.repository.CompositeUserNewsResourceRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestNewsRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestUserDataRepository
-import com.google.samples.apps.nowinandroid.core.testing.util.TestNetworkMonitor
-import com.google.samples.apps.nowinandroid.core.testing.util.TestTimeZoneMonitor
+import com.yourcompany.partygameapp.core.data.repository.CompositeUserNewsResourceRepository
+import com.yourcompany.partygameapp.core.testing.repository.TestNewsRepository
+import com.yourcompany.partygameapp.core.testing.repository.TestUserDataRepository
+import com.yourcompany.partygameapp.core.testing.util.TestNetworkMonitor
+import com.yourcompany.partygameapp.core.testing.util.TestTimeZoneMonitor
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
 import kotlinx.coroutines.flow.collect

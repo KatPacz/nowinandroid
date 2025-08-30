@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.datastore
+package com.yourcompany.partygameapp.core.datastore
 
 import android.util.Log
 import androidx.datastore.core.DataStore
-import com.google.samples.apps.nowinandroid.core.model.data.DarkThemeConfig
-import com.google.samples.apps.nowinandroid.core.model.data.ThemeBrand
-import com.google.samples.apps.nowinandroid.core.model.data.UserData
+import com.yourcompany.partygameapp.core.model.data.DarkThemeConfig
+import com.yourcompany.partygameapp.core.model.data.ThemeBrand
+import com.yourcompany.partygameapp.core.model.data.UserData
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.map
 import java.io.IOException

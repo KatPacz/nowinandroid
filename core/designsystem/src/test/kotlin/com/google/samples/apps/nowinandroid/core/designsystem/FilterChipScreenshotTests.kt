@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.designsystem
+package com.yourcompany.partygameapp.core.designsystem
 
 import androidx.activity.ComponentActivity
 import androidx.compose.material3.Surface
@@ -30,11 +30,11 @@ import androidx.compose.ui.test.then
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import com.github.takahirom.roborazzi.captureRoboImage
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaBackground
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaFilterChip
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
-import com.google.samples.apps.nowinandroid.core.testing.util.DefaultRoborazziOptions
-import com.google.samples.apps.nowinandroid.core.testing.util.captureMultiTheme
+import com.yourcompany.partygameapp.core.designsystem.component.NiaBackground
+import com.yourcompany.partygameapp.core.designsystem.component.NiaFilterChip
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.testing.util.DefaultRoborazziOptions
+import com.yourcompany.partygameapp.core.testing.util.captureMultiTheme
 import dagger.hilt.android.testing.HiltTestApplication
 import org.junit.Rule
 import org.junit.Test

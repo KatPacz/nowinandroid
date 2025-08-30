@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.designsystem.component
+package com.yourcompany.partygameapp.core.designsystem.component
 
 import androidx.compose.material3.FilledIconToggleButton
 import androidx.compose.material3.Icon
@@ -24,8 +24,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.designsystem.icon.NiaIcons
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
 
 /**
  * Now in Android toggle button with icon and checked icon content slots. Wraps Material 3

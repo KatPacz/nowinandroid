@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.model.data
+package com.yourcompany.partygameapp.core.model.data
 
 /**
  * External data layer representation of a NiA Topic

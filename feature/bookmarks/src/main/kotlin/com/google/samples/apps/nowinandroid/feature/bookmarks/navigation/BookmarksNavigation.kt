@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.bookmarks.navigation
+package com.yourcompany.partygameapp.feature.bookmarks.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import com.google.samples.apps.nowinandroid.feature.bookmarks.BookmarksRoute
+import com.yourcompany.partygameapp.feature.bookmarks.BookmarksRoute
 import kotlinx.serialization.Serializable
 
 @Serializable object BookmarksRoute

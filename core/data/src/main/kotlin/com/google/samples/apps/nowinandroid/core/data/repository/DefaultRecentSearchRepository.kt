@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.repository
+package com.yourcompany.partygameapp.core.data.repository
 
-import com.google.samples.apps.nowinandroid.core.data.model.RecentSearchQuery
-import com.google.samples.apps.nowinandroid.core.data.model.asExternalModel
-import com.google.samples.apps.nowinandroid.core.database.dao.RecentSearchQueryDao
-import com.google.samples.apps.nowinandroid.core.database.model.RecentSearchQueryEntity
+import com.yourcompany.partygameapp.core.data.model.RecentSearchQuery
+import com.yourcompany.partygameapp.core.data.model.asExternalModel
+import com.yourcompany.partygameapp.core.database.dao.RecentSearchQueryDao
+import com.yourcompany.partygameapp.core.database.model.RecentSearchQueryEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.datetime.Clock

@@ -13,5 +13,4 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #
-
-com.google.samples.apps.nowinandroid.lint.NiaIssueRegistry
+com.yourcompany.partygameapp.lint.NiaIssueRegistry

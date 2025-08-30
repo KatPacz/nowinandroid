@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.lint
+package com.yourcompany.partygameapp.lint
 
 import com.android.tools.lint.client.api.IssueRegistry
 import com.android.tools.lint.client.api.Vendor
 import com.android.tools.lint.detector.api.CURRENT_API
-import com.google.samples.apps.nowinandroid.lint.designsystem.DesignSystemDetector
+import com.yourcompany.partygameapp.lint.designsystem.DesignSystemDetector
 
 class NiaIssueRegistry : IssueRegistry() {
 
@@ -35,7 +35,7 @@ class NiaIssueRegistry : IssueRegistry() {
 
     override val vendor: Vendor = Vendor(
         vendorName = "Now in Android",
-        feedbackUrl = "https://github.com/android/nowinandroid/issues",
-        contact = "https://github.com/android/nowinandroid",
+        feedbackUrl = "https://github.com/android/partygameapp/issues",
+        contact = "https://github.com/android/partygameapp",
     )
 }

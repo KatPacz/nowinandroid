@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.sync.initializers
+package com.yourcompany.partygameapp.sync.initializers
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -25,7 +25,7 @@ import androidx.core.app.NotificationCompat
 import androidx.work.Constraints
 import androidx.work.ForegroundInfo
 import androidx.work.NetworkType
-import com.google.samples.apps.nowinandroid.sync.R
+import com.yourcompany.partygameapp.sync.R
 
 const val SYNC_TOPIC = "sync"
 private const val SYNC_NOTIFICATION_ID = 0
@@ -71,7 +71,7 @@ private fun Context.syncWorkNotification(): Notification {
         SYNC_NOTIFICATION_CHANNEL_ID,
     )
         .setSmallIcon(
-            com.google.samples.apps.nowinandroid.core.notifications.R.drawable.core_notifications_ic_nia_notification,
+            com.yourcompany.partygameapp.core.notifications.R.drawable.core_notifications_ic_nia_notification,
         )
         .setContentTitle(getString(R.string.sync_work_notification_title))
         .setPriority(NotificationCompat.PRIORITY_DEFAULT)

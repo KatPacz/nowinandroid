@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.sync.status
+package com.yourcompany.partygameapp.sync.status
 
 /**
  * Subscribes to backend requested synchronization

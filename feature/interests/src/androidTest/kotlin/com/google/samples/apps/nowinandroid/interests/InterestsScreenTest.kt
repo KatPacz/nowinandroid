@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.interests
+package com.yourcompany.partygameapp.interests
 
 import androidx.activity.ComponentActivity
 import androidx.compose.runtime.Composable
@@ -24,14 +24,14 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
-import com.google.samples.apps.nowinandroid.core.testing.data.followableTopicTestData
-import com.google.samples.apps.nowinandroid.feature.interests.InterestsScreen
-import com.google.samples.apps.nowinandroid.feature.interests.InterestsUiState
+import com.yourcompany.partygameapp.core.testing.data.followableTopicTestData
+import com.yourcompany.partygameapp.feature.interests.InterestsScreen
+import com.yourcompany.partygameapp.feature.interests.InterestsUiState
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import com.google.samples.apps.nowinandroid.core.ui.R as CoreUiR
-import com.google.samples.apps.nowinandroid.feature.interests.R as InterestsR
+import com.yourcompany.partygameapp.core.ui.R as CoreUiR
+import com.yourcompany.partygameapp.feature.interests.R as InterestsR
 
 /**
  * UI test for checking the correct behaviour of the Interests screen;

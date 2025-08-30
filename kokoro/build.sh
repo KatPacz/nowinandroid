@@ -33,7 +33,7 @@ echo "Installing build-tools..."
 echo y | ${ANDROID_HOME}/tools/bin/sdkmanager "build-tools;30.0.3" > /dev/null
 echo y | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
 
-cd $KOKORO_ARTIFACTS_DIR/git/nowinandroid
+cd $KOKORO_ARTIFACTS_DIR/git/partygameapp
 
 # The build needs Java 17, set it as the default Java version.
 sudo apt-get update

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.sync.test
+package com.yourcompany.partygameapp.core.sync.test
 
-import com.google.samples.apps.nowinandroid.core.data.util.SyncManager
+import com.yourcompany.partygameapp.core.data.util.SyncManager
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 import javax.inject.Inject

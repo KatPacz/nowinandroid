@@ -16,12 +16,12 @@
 
 @file:Suppress("ktlint:standard:max-line-length")
 
-package com.google.samples.apps.nowinandroid.feature.search
+package com.yourcompany.partygameapp.feature.search
 
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.core.ui.PreviewParameterData.newsResources
-import com.google.samples.apps.nowinandroid.core.ui.PreviewParameterData.topics
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.ui.PreviewParameterData.newsResources
+import com.yourcompany.partygameapp.core.ui.PreviewParameterData.topics
 
 /**
  * This [PreviewParameterProvider](https://developer.android.com/reference/kotlin/androidx/compose/ui/tooling/preview/PreviewParameterProvider)

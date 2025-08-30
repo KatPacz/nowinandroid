@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.bookmarks
+package com.yourcompany.partygameapp.feature.bookmarks
 
-import com.google.samples.apps.nowinandroid.core.data.repository.CompositeUserNewsResourceRepository
-import com.google.samples.apps.nowinandroid.core.testing.data.newsResourcesTestData
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestNewsRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestUserDataRepository
-import com.google.samples.apps.nowinandroid.core.testing.util.MainDispatcherRule
-import com.google.samples.apps.nowinandroid.core.ui.NewsFeedUiState.Loading
-import com.google.samples.apps.nowinandroid.core.ui.NewsFeedUiState.Success
+import com.yourcompany.partygameapp.core.data.repository.CompositeUserNewsResourceRepository
+import com.yourcompany.partygameapp.core.testing.data.newsResourcesTestData
+import com.yourcompany.partygameapp.core.testing.repository.TestNewsRepository
+import com.yourcompany.partygameapp.core.testing.repository.TestUserDataRepository
+import com.yourcompany.partygameapp.core.testing.util.MainDispatcherRule
+import com.yourcompany.partygameapp.core.ui.NewsFeedUiState.Loading
+import com.yourcompany.partygameapp.core.ui.NewsFeedUiState.Success
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.UnconfinedTestDispatcher

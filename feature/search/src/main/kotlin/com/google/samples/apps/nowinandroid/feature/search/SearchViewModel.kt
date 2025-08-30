@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.search
+package com.yourcompany.partygameapp.feature.search
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent.Param
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsHelper
-import com.google.samples.apps.nowinandroid.core.data.repository.RecentSearchRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.SearchContentsRepository
-import com.google.samples.apps.nowinandroid.core.data.repository.UserDataRepository
-import com.google.samples.apps.nowinandroid.core.domain.GetRecentSearchQueriesUseCase
-import com.google.samples.apps.nowinandroid.core.domain.GetSearchContentsUseCase
-import com.google.samples.apps.nowinandroid.core.model.data.UserSearchResult
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent.Param
+import com.yourcompany.partygameapp.core.analytics.AnalyticsHelper
+import com.yourcompany.partygameapp.core.data.repository.RecentSearchRepository
+import com.yourcompany.partygameapp.core.data.repository.SearchContentsRepository
+import com.yourcompany.partygameapp.core.data.repository.UserDataRepository
+import com.yourcompany.partygameapp.core.domain.GetRecentSearchQueriesUseCase
+import com.yourcompany.partygameapp.core.domain.GetSearchContentsUseCase
+import com.yourcompany.partygameapp.core.model.data.UserSearchResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -48,7 +48,7 @@ class SearchViewModel @Inject constructor(
     private val userDataRepository: UserDataRepository,
     private val savedStateHandle: SavedStateHandle,
     private val analyticsHelper: AnalyticsHelper,
-) : ViewModel() {
+) : hiltViewModel() {
 
     val searchQuery = savedStateHandle.getStateFlow(key = SEARCH_QUERY, initialValue = "")
 

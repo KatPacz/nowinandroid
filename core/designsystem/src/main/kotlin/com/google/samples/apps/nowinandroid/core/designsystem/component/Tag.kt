@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.designsystem.component
+package com.yourcompany.partygameapp.core.designsystem.component
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.ButtonDefaults
@@ -25,7 +25,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
 
 @Composable
 fun NiaTopicTag(

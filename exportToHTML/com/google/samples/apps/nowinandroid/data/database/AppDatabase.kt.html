@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>AppDatabase.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #2aacb8;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+AppDatabase.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * Copyright 2025 The Android Open Source Project 
+ * 
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ * 
+ *     https://www.apache.org/licenses/LICENSE-2.0 
+ * 
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License. 
+ */</span>
+
+<span class="s2">package </span><span class="s1">com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">data</span><span class="s3">.</span><span class="s1">database</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">room</span><span class="s3">.</span><span class="s1">Database</span>
+
+<span class="s1">@Database</span><span class="s3">(</span><span class="s1">entities </span><span class="s3">= [</span><span class="s1">CategoryEntity::</span><span class="s2">class</span><span class="s3">, </span><span class="s1">DeckEntity::</span><span class="s2">class</span><span class="s3">, </span><span class="s1">CardEntity::</span><span class="s2">class</span><span class="s3">], </span><span class="s1">version </span><span class="s3">= </span><span class="s4">1</span><span class="s3">)</span>
+    <span class="s1">abstract </span><span class="s2">class </span><span class="s1">AppDatabase : RoomDatabase</span><span class="s3">() {</span>
+        <span class="s1">abstract </span><span class="s2">fun </span><span class="s1">deckDao</span><span class="s3">()</span><span class="s1">: DeckDao</span>
+        <span class="s0">// We'll add other DAOs here later (PlayerDao, CategoryDao)</span>
+    <span class="s3">}</span>
+<span class="s1">abstract </span><span class="s2">class </span><span class="s1">AppDatabase : RoomDatabase</span><span class="s3">() {</span>
+    <span class="s0">// DAOs...</span>
+
+    <span class="s2">class </span><span class="s1">PrepopulateCallback</span><span class="s3">(</span>
+        <span class="s1">private </span><span class="s2">val </span><span class="s1">context: Context</span><span class="s3">,</span>
+        <span class="s1">private </span><span class="s2">val </span><span class="s1">provider: Provider</span><span class="s3">&lt;</span><span class="s1">CategoryDao</span><span class="s3">&gt;,</span>
+        <span class="s1">private </span><span class="s2">val </span><span class="s1">providerDeck: Provider</span><span class="s3">&lt;</span><span class="s1">DeckDao</span><span class="s3">&gt;,</span>
+        <span class="s1">private </span><span class="s2">val </span><span class="s1">providerCard: Provider</span><span class="s3">&lt;</span><span class="s1">CardDao</span><span class="s3">&gt;</span>
+    <span class="s3">) </span><span class="s1">: RoomDatabase</span><span class="s3">.</span><span class="s1">Callback</span><span class="s3">() {</span>
+        <span class="s0">// Using CoroutineScope to perform this work off the main thread</span>
+        <span class="s1">private </span><span class="s2">val </span><span class="s1">applicationScope </span><span class="s3">= </span><span class="s1">CoroutineScope</span><span class="s3">(</span><span class="s1">SupervisorJob</span><span class="s3">())</span>
+
+        <span class="s1">override </span><span class="s2">fun </span><span class="s1">onCreate</span><span class="s3">(</span><span class="s1">db: SupportSQLiteDatabase</span><span class="s3">) {</span>
+            <span class="s2">super</span><span class="s3">.</span><span class="s1">onCreate</span><span class="s3">(</span><span class="s1">db</span><span class="s3">)</span>
+            <span class="s1">applicationScope</span><span class="s3">.</span><span class="s1">launch</span><span class="s3">(</span><span class="s1">Dispatchers</span><span class="s3">.</span><span class="s1">IO</span><span class="s3">) {</span>
+                <span class="s1">prepopulateDatabase</span><span class="s3">()</span>
+            <span class="s3">}</span>
+        <span class="s3">}</span>
+
+        <span class="s1">suspend </span><span class="s2">fun </span><span class="s1">prepopulateDatabase</span><span class="s3">() {</span>
+            <span class="s0">// Define default categories</span>
+            <span class="s2">val </span><span class="s1">categories </span><span class="s3">= </span><span class="s1">mapOf</span><span class="s3">(</span>
+                <span class="s5">&quot;Animals&quot; </span><span class="s1">to </span><span class="s5">&quot;#6B8E85&quot;</span><span class="s3">, </span><span class="s0">// Muted Green</span>
+                <span class="s5">&quot;Food&quot; </span><span class="s1">to </span><span class="s5">&quot;#F4A261&quot;</span><span class="s3">, </span><span class="s0">// Peach</span>
+                <span class="s5">&quot;Movies&quot; </span><span class="s1">to </span><span class="s5">&quot;#4A5859&quot; </span><span class="s0">// Slate Gray</span>
+            <span class="s3">)</span>
+
+            <span class="s1">categories</span><span class="s3">.</span><span class="s1">forEach </span><span class="s3">{ (</span><span class="s1">categoryName</span><span class="s3">, </span><span class="s1">color</span><span class="s3">) -&gt;</span>
+                <span class="s2">val </span><span class="s1">categoryId </span><span class="s3">= </span><span class="s1">provider</span><span class="s3">.</span><span class="s1">get</span><span class="s3">().</span><span class="s1">insertCategory</span><span class="s3">(</span><span class="s1">CategoryEntity</span><span class="s3">(</span><span class="s1">name </span><span class="s3">= </span><span class="s1">categoryName</span><span class="s3">, </span><span class="s1">colorHex </span><span class="s3">= </span><span class="s1">color</span><span class="s3">))</span>
+
+                <span class="s0">// Read the corresponding text file from assets</span>
+                <span class="s2">val </span><span class="s1">deckFileName </span><span class="s3">= </span><span class="s5">&quot;</span><span class="s2">${</span><span class="s1">categoryName</span><span class="s3">.</span><span class="s1">lowercase</span><span class="s3">()</span><span class="s2">}</span><span class="s5">.txt&quot;</span>
+                <span class="s2">val </span><span class="s1">deckName </span><span class="s3">= </span><span class="s1">categoryName</span>
+                <span class="s2">val </span><span class="s1">deckId </span><span class="s3">= </span><span class="s1">providerDeck</span><span class="s3">.</span><span class="s1">get</span><span class="s3">().</span><span class="s1">insertDeck</span><span class="s3">(</span><span class="s1">DeckEntity</span><span class="s3">(</span><span class="s1">name </span><span class="s3">= </span><span class="s1">deckName</span><span class="s3">, </span><span class="s1">description </span><span class="s3">= </span><span class="s5">&quot;Default deck&quot;</span><span class="s3">, </span><span class="s1">categoryId </span><span class="s3">= </span><span class="s1">categoryId</span><span class="s3">.</span><span class="s1">toInt</span><span class="s3">()))</span>
+
+                <span class="s2">try </span><span class="s3">{</span>
+                    <span class="s1">context</span><span class="s3">.</span><span class="s1">assets</span><span class="s3">.</span><span class="s1">open</span><span class="s3">(</span><span class="s5">&quot;decks/en/</span><span class="s2">$</span><span class="s1">deckFileName</span><span class="s5">&quot;</span><span class="s3">).</span><span class="s1">bufferedReader</span><span class="s3">().</span><span class="s1">useLines </span><span class="s3">{ </span><span class="s1">lines </span><span class="s3">-&gt;</span>
+                        <span class="s1">lines</span><span class="s3">.</span><span class="s1">forEach </span><span class="s3">{ </span><span class="s1">line </span><span class="s3">-&gt;</span>
+                            <span class="s2">if </span><span class="s3">(</span><span class="s1">line</span><span class="s3">.</span><span class="s1">isNotBlank</span><span class="s3">()) {</span>
+                                <span class="s1">providerCard</span><span class="s3">.</span><span class="s1">get</span><span class="s3">().</span><span class="s1">insertCard</span><span class="s3">(</span><span class="s1">CardEntity</span><span class="s3">(</span><span class="s1">text </span><span class="s3">= </span><span class="s1">line</span><span class="s3">, </span><span class="s1">deckId </span><span class="s3">= </span><span class="s1">deckId</span><span class="s3">.</span><span class="s1">toInt</span><span class="s3">()))</span>
+                            <span class="s3">}</span>
+                        <span class="s3">}</span>
+                    <span class="s3">}</span>
+                <span class="s3">} </span><span class="s1">catch </span><span class="s3">(</span><span class="s1">e: IOException</span><span class="s3">) {</span>
+                    <span class="s1">Log</span><span class="s3">.</span><span class="s1">e</span><span class="s3">(</span><span class="s5">&quot;PrepopulateDB&quot;</span><span class="s3">, </span><span class="s5">&quot;Error reading asset file: </span><span class="s2">$</span><span class="s1">deckFileName</span><span class="s5">&quot;</span><span class="s3">, </span><span class="s1">e</span><span class="s3">)</span>
+                <span class="s3">}</span>
+            <span class="s3">}</span>
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+<span class="s3">}</span></pre>
+</body>
+</html>

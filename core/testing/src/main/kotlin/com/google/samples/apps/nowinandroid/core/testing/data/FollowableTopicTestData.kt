@@ -16,10 +16,10 @@
 
 @file:Suppress("ktlint:standard:max-line-length")
 
-package com.google.samples.apps.nowinandroid.core.testing.data
+package com.yourcompany.partygameapp.core.testing.data
 
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.model.data.Topic
 
 val followableTopicTestData: List<FollowableTopic> = listOf(
     FollowableTopic(

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.database.model
+package com.yourcompany.partygameapp.core.database.model
 
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
+import com.yourcompany.partygameapp.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.model.data.Topic
 import kotlinx.datetime.Instant
 import org.junit.Test
 import kotlin.test.assertEquals

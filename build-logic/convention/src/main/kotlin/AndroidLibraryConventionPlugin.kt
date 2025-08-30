@@ -16,12 +16,12 @@
 
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.gradle.LibraryExtension
-import com.google.samples.apps.nowinandroid.configureFlavors
-import com.google.samples.apps.nowinandroid.configureGradleManagedDevices
-import com.google.samples.apps.nowinandroid.configureKotlinAndroid
-import com.google.samples.apps.nowinandroid.configurePrintApksTask
-import com.google.samples.apps.nowinandroid.disableUnnecessaryAndroidTests
-import com.google.samples.apps.nowinandroid.libs
+import com.yourcompany.partygameapp.configureFlavors
+import com.yourcompany.partygameapp.configureGradleManagedDevices
+import com.yourcompany.partygameapp.configureKotlinAndroid
+import com.yourcompany.partygameapp.configurePrintApksTask
+import com.yourcompany.partygameapp.disableUnnecessaryAndroidTests
+import com.yourcompany.partygameapp.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
@@ -33,7 +33,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
         with(target) {
             apply(plugin = "com.android.library")
             apply(plugin = "org.jetbrains.kotlin.android")
-            apply(plugin = "nowinandroid.android.lint")
+            apply(plugin = "partygameapp.android.lint")
 
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)

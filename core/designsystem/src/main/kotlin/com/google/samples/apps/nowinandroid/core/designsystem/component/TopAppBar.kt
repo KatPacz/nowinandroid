@@ -16,7 +16,7 @@
 
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.google.samples.apps.nowinandroid.core.designsystem.component
+package com.yourcompany.partygameapp.core.designsystem.component
 
 import androidx.annotation.StringRes
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -33,8 +33,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.designsystem.icon.NiaIcons
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

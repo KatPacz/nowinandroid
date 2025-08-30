@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>DeckEntity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+DeckEntity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * Copyright 2025 The Android Open Source Project 
+ * 
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ * 
+ *     https://www.apache.org/licenses/LICENSE-2.0 
+ * 
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License. 
+ */</span>
+
+<span class="s2">package </span><span class="s1">com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">data</span><span class="s3">.</span><span class="s1">database</span><span class="s3">.</span><span class="s1">entity</span>
+
+
+    <span class="s1">@Entity</span><span class="s3">(</span>
+        <span class="s1">tableName </span><span class="s3">= </span><span class="s4">&quot;decks&quot;</span><span class="s3">,</span>
+        <span class="s1">foreignKeys </span><span class="s3">= [</span>
+            <span class="s1">ForeignKey</span><span class="s3">(</span>
+                <span class="s1">entity </span><span class="s3">= </span><span class="s1">CategoryEntity::</span><span class="s2">class</span><span class="s3">,</span>
+                <span class="s1">parentColumns </span><span class="s3">= [</span><span class="s4">&quot;id&quot;</span><span class="s3">],</span>
+                <span class="s1">childColumns </span><span class="s3">= [</span><span class="s4">&quot;categoryId&quot;</span><span class="s3">],</span>
+                <span class="s1">onDelete </span><span class="s3">= </span><span class="s1">ForeignKey</span><span class="s3">.</span><span class="s1">CASCADE</span>
+            <span class="s3">)</span>
+        <span class="s3">]</span>
+    <span class="s3">)</span>
+    <span class="s1">data </span><span class="s2">class </span><span class="s1">DeckEntity</span><span class="s3">(</span>
+        <span class="s1">@PrimaryKey</span><span class="s3">(</span><span class="s1">autoGenerate </span><span class="s3">= </span><span class="s2">true</span><span class="s3">) </span><span class="s2">val </span><span class="s1">id: Int </span><span class="s3">= </span><span class="s5">0</span><span class="s3">,</span>
+        <span class="s2">val </span><span class="s1">name: String</span><span class="s3">,</span>
+        <span class="s2">val </span><span class="s1">description: String</span><span class="s3">,</span>
+        <span class="s2">val </span><span class="s1">categoryId: Int</span>
+    <span class="s3">)</span>
+</pre>
+</body>
+</html>

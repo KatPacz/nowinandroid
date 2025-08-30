@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 plugins {
-    alias(libs.plugins.nowinandroid.android.library)
-    alias(libs.plugins.nowinandroid.android.library.jacoco)
-    alias(libs.plugins.nowinandroid.hilt)
+    alias(libs.plugins.partygameapp.android.library)
+    alias(libs.plugins.partygameapp.android.library.jacoco)
+    alias(libs.plugins.partygameapp.hilt)
 }
 
 android {
     defaultConfig {
-        testInstrumentationRunner = "com.google.samples.apps.nowinandroid.core.testing.NiaTestRunner"
+        testInstrumentationRunner = "com.yourcompany.partygameapp.core.testing.NiaTestRunner"
     }
-    namespace = "com.google.samples.apps.nowinandroid.sync"
+    namespace = "com.yourcompany.partygameapp.sync"
 }
 
 dependencies {

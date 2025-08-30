@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>HomeScreen.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+HomeScreen.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">// Make sure your package name at the top is correct</span>
+<span class="s2">package </span><span class="s1">com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">ui</span><span class="s3">.</span><span class="s1">home</span>
+
+<span class="s0">// --- START: ADD ALL OF THESE IMPORTS ---</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">foundation</span><span class="s3">.</span><span class="s1">layout</span><span class="s3">.</span><span class="s1">Arrangement</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">foundation</span><span class="s3">.</span><span class="s1">layout</span><span class="s3">.</span><span class="s1">Box</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">foundation</span><span class="s3">.</span><span class="s1">layout</span><span class="s3">.</span><span class="s1">aspectRatio</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">foundation</span><span class="s3">.</span><span class="s1">layout</span><span class="s3">.</span><span class="s1">fillMaxSize</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">foundation</span><span class="s3">.</span><span class="s1">layout</span><span class="s3">.</span><span class="s1">padding</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">foundation</span><span class="s3">.</span><span class="s1">lazy</span><span class="s3">.</span><span class="s1">grid</span><span class="s3">.</span><span class="s1">GridCells</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">foundation</span><span class="s3">.</span><span class="s1">lazy</span><span class="s3">.</span><span class="s1">grid</span><span class="s3">.</span><span class="s1">LazyVerticalGrid</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">foundation</span><span class="s3">.</span><span class="s1">lazy</span><span class="s3">.</span><span class="s1">grid</span><span class="s3">.</span><span class="s1">items</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">foundation</span><span class="s3">.</span><span class="s1">shape</span><span class="s3">.</span><span class="s1">RoundedCornerShape</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">material3</span><span class="s3">.</span><span class="s1">Card</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">material3</span><span class="s3">.</span><span class="s1">CardDefaults</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">material3</span><span class="s3">.</span><span class="s1">CircularProgressIndicator</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">material3</span><span class="s3">.</span><span class="s1">MaterialTheme</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">material3</span><span class="s3">.</span><span class="s1">Scaffold</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">material3</span><span class="s3">.</span><span class="s1">Text</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">runtime</span><span class="s3">.</span><span class="s1">Composable</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">runtime</span><span class="s3">.</span><span class="s1">collectAsState</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">runtime</span><span class="s3">.</span><span class="s1">getValue</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">ui</span><span class="s3">.</span><span class="s1">Alignment</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">ui</span><span class="s3">.</span><span class="s1">Modifier</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">ui</span><span class="s3">.</span><span class="s1">text</span><span class="s3">.</span><span class="s1">style</span><span class="s3">.</span><span class="s1">TextAlign</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">ui</span><span class="s3">.</span><span class="s1">unit</span><span class="s3">.</span><span class="s1">dp</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">hilt</span><span class="s3">.</span><span class="s1">navigation</span><span class="s3">.</span><span class="s1">compose</span><span class="s3">.</span><span class="s1">hiltViewModel</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">data</span><span class="s3">.</span><span class="s1">database</span><span class="s3">.</span><span class="s1">entity</span><span class="s3">.</span><span class="s1">DeckEntity</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">ui</span><span class="s3">.</span><span class="s1">theme</span><span class="s3">.</span><span class="s1">Peach</span>
+<span class="s0">// --- END: ADD ALL OF THESE IMPORTS ---</span>
+
+<span class="s0">// NOTICE: We have removed the &quot;class HomeScreen {&quot; wrapper</span>
+<span class="s1">@Composable</span>
+<span class="s2">fun </span><span class="s1">HomeScreen</span><span class="s3">(</span>
+    <span class="s1">viewModel: HomeViewModel </span><span class="s3">= </span><span class="s1">hiltViewModel</span><span class="s3">()</span>
+<span class="s3">) {</span>
+    <span class="s2">val </span><span class="s1">uiState by viewModel</span><span class="s3">.</span><span class="s1">uiState</span><span class="s3">.</span><span class="s1">collectAsState</span><span class="s3">()</span>
+
+    <span class="s0">// We'll use a Scaffold for basic layout structure</span>
+    <span class="s1">Scaffold</span><span class="s3">(</span>
+        <span class="s1">topBar </span><span class="s3">= { </span><span class="s0">/* TopBar with search and filter will be added later */ </span><span class="s3">},</span>
+        <span class="s1">bottomBar </span><span class="s3">= { </span><span class="s0">/* Bottom navigation bar will be added later */ </span><span class="s3">}</span>
+    <span class="s3">) { </span><span class="s1">paddingValues </span><span class="s3">-&gt;</span>
+        <span class="s2">when </span><span class="s3">(</span><span class="s2">val </span><span class="s1">state </span><span class="s3">= </span><span class="s1">uiState</span><span class="s3">) {</span>
+            <span class="s2">is </span><span class="s1">HomeScreenState</span><span class="s3">.</span><span class="s1">Loading </span><span class="s3">-&gt; {</span>
+                <span class="s0">// Show a loading indicator</span>
+                <span class="s1">Box</span><span class="s3">(</span><span class="s1">modifier </span><span class="s3">= </span><span class="s1">Modifier</span><span class="s3">.</span><span class="s1">fillMaxSize</span><span class="s3">(), </span><span class="s1">contentAlignment </span><span class="s3">= </span><span class="s1">Alignment</span><span class="s3">.</span><span class="s1">Center</span><span class="s3">) {</span>
+                    <span class="s1">CircularProgressIndicator</span><span class="s3">()</span>
+                <span class="s3">}</span>
+            <span class="s3">}</span>
+            <span class="s2">is </span><span class="s1">HomeScreenState</span><span class="s3">.</span><span class="s1">Success </span><span class="s3">-&gt; {</span>
+                <span class="s1">DeckGrid</span><span class="s3">(</span><span class="s1">decks </span><span class="s3">= </span><span class="s1">state</span><span class="s3">.</span><span class="s1">decks</span><span class="s3">, </span><span class="s1">modifier </span><span class="s3">= </span><span class="s1">Modifier</span><span class="s3">.</span><span class="s1">padding</span><span class="s3">(</span><span class="s1">paddingValues</span><span class="s3">))</span>
+            <span class="s3">}</span>
+            <span class="s2">is </span><span class="s1">HomeScreenState</span><span class="s3">.</span><span class="s1">Error </span><span class="s3">-&gt; {</span>
+                <span class="s0">// Show an error message</span>
+                <span class="s1">Text</span><span class="s3">(</span><span class="s1">text </span><span class="s3">= </span><span class="s4">&quot;Error: </span><span class="s2">${</span><span class="s1">state</span><span class="s3">.</span><span class="s1">message</span><span class="s2">}</span><span class="s4">&quot;</span><span class="s3">)</span>
+            <span class="s3">}</span>
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+<span class="s3">}</span>
+
+<span class="s1">@Composable</span>
+<span class="s2">fun </span><span class="s1">DeckGrid</span><span class="s3">(</span><span class="s1">decks: List</span><span class="s3">&lt;</span><span class="s1">DeckEntity</span><span class="s3">&gt;, </span><span class="s1">modifier: Modifier </span><span class="s3">= </span><span class="s1">Modifier</span><span class="s3">) {</span>
+    <span class="s1">LazyVerticalGrid</span><span class="s3">(</span>
+        <span class="s1">columns </span><span class="s3">= </span><span class="s1">GridCells</span><span class="s3">.</span><span class="s1">Fixed</span><span class="s3">(</span><span class="s5">2</span><span class="s3">), </span><span class="s0">// 2 columns as per design</span>
+        <span class="s1">modifier </span><span class="s3">= </span><span class="s1">modifier</span><span class="s3">.</span><span class="s1">padding</span><span class="s3">(</span><span class="s5">8</span><span class="s3">.</span><span class="s1">dp</span><span class="s3">),</span>
+        <span class="s1">verticalArrangement </span><span class="s3">= </span><span class="s1">Arrangement</span><span class="s3">.</span><span class="s1">spacedBy</span><span class="s3">(</span><span class="s5">8</span><span class="s3">.</span><span class="s1">dp</span><span class="s3">),</span>
+        <span class="s1">horizontalArrangement </span><span class="s3">= </span><span class="s1">Arrangement</span><span class="s3">.</span><span class="s1">spacedBy</span><span class="s3">(</span><span class="s5">8</span><span class="s3">.</span><span class="s1">dp</span><span class="s3">)</span>
+
+    <span class="s3">) {</span>
+        <span class="s1">items</span><span class="s3">(</span><span class="s1">decks</span><span class="s3">) { </span><span class="s1">deck </span><span class="s3">-&gt;</span>
+            <span class="s1">DeckTile</span><span class="s3">(</span><span class="s1">deck </span><span class="s3">= </span><span class="s1">deck</span><span class="s3">)</span>
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+<span class="s3">}</span>
+
+<span class="s1">@Composable</span>
+<span class="s2">fun </span><span class="s1">DeckTile</span><span class="s3">(</span><span class="s1">deck: DeckEntity</span><span class="s3">) {</span>
+    <span class="s0">// Basic representation of a deck tile</span>
+    <span class="s1">Card</span><span class="s3">(</span>
+        <span class="s1">modifier </span><span class="s3">= </span><span class="s1">Modifier</span><span class="s3">.</span><span class="s1">aspectRatio</span><span class="s3">(</span><span class="s5">1f</span><span class="s3">), </span><span class="s0">// Makes it a square</span>
+        <span class="s1">shape </span><span class="s3">= </span><span class="s1">RoundedCornerShape</span><span class="s3">(</span><span class="s5">16</span><span class="s3">.</span><span class="s1">dp</span><span class="s3">),</span>
+        <span class="s0">// The color will be dynamic based on category later</span>
+        <span class="s1">colors </span><span class="s3">= </span><span class="s1">CardDefaults</span><span class="s3">.</span><span class="s1">cardColors</span><span class="s3">(</span><span class="s1">containerColor </span><span class="s3">= </span><span class="s1">Peach</span><span class="s3">)</span>
+    <span class="s3">) {</span>
+        <span class="s1">Box</span><span class="s3">(</span><span class="s1">modifier </span><span class="s3">= </span><span class="s1">Modifier</span><span class="s3">.</span><span class="s1">fillMaxSize</span><span class="s3">().</span><span class="s1">padding</span><span class="s3">(</span><span class="s5">16</span><span class="s3">.</span><span class="s1">dp</span><span class="s3">), </span><span class="s1">contentAlignment </span><span class="s3">= </span><span class="s1">Alignment</span><span class="s3">.</span><span class="s1">Center</span><span class="s3">) {</span>
+            <span class="s1">Text</span><span class="s3">(</span>
+                <span class="s1">text </span><span class="s3">= </span><span class="s1">deck</span><span class="s3">.</span><span class="s1">name</span><span class="s3">,</span>
+                <span class="s1">style </span><span class="s3">= </span><span class="s1">MaterialTheme</span><span class="s3">.</span><span class="s1">typography</span><span class="s3">.</span><span class="s1">titleLarge</span><span class="s3">,</span>
+                <span class="s1">textAlign </span><span class="s3">= </span><span class="s1">TextAlign</span><span class="s3">.</span><span class="s1">Center</span>
+            <span class="s3">)</span>
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+<span class="s3">}</span>
+<span class="s1">@Composable</span>
+<span class="s2">fun </span><span class="s1">HomeScreen</span><span class="s3">(</span><span class="s1">onDeckSelected: </span><span class="s3">(</span><span class="s1">Int</span><span class="s3">) -&gt; </span><span class="s1">Unit</span><span class="s3">) {</span>
+    <span class="s0">// ...</span>
+    <span class="s0">// Inside DeckGrid LazyVerticalGrid:</span>
+    <span class="s1">items</span><span class="s3">(</span><span class="s1">decks</span><span class="s3">) { </span><span class="s1">deck </span><span class="s3">-&gt;</span>
+        <span class="s1">DeckTile</span><span class="s3">(</span>
+            <span class="s1">deck </span><span class="s3">= </span><span class="s1">deck</span><span class="s3">,</span>
+            <span class="s1">onClick </span><span class="s3">= { </span><span class="s1">onDeckSelected</span><span class="s3">(</span><span class="s1">deck</span><span class="s3">.</span><span class="s1">id</span><span class="s3">) }</span>
+        <span class="s3">)</span>
+    <span class="s3">}</span>
+<span class="s3">}</span>
+
+<span class="s1">@Composable</span>
+<span class="s2">fun </span><span class="s1">DeckTile</span><span class="s3">(</span><span class="s1">deck: Deck</span><span class="s3">, </span><span class="s1">onClick: </span><span class="s3">() -&gt; </span><span class="s1">Unit</span><span class="s3">) {</span>
+    <span class="s0">// Wrap the card in a clickable modifier</span>
+    <span class="s1">Card</span><span class="s3">(</span><span class="s1">modifier </span><span class="s3">= </span><span class="s1">Modifier</span><span class="s3">.</span><span class="s1">clickable </span><span class="s3">{ </span><span class="s1">onClick</span><span class="s3">() }) {</span>
+        <span class="s0">// ... same content as before</span>
+    <span class="s3">}</span>
+<span class="s3">}</span></pre>
+</body>
+</html>

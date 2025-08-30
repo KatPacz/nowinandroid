@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.analytics
+package com.yourcompany.partygameapp.core.analytics
 
 /**
  * Implementation of AnalyticsHelper which does nothing. Useful for tests and previews.

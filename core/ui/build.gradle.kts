@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 plugins {
-    alias(libs.plugins.nowinandroid.android.library)
-    alias(libs.plugins.nowinandroid.android.library.compose)
-    alias(libs.plugins.nowinandroid.android.library.jacoco)
+    alias(libs.plugins.partygameapp.android.library)
+    alias(libs.plugins.partygameapp.android.library.compose)
+    alias(libs.plugins.partygameapp.android.library.jacoco)
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.core.ui"
+    namespace = "com.yourcompany.partygameapp.core.ui"
 }
 
 dependencies {

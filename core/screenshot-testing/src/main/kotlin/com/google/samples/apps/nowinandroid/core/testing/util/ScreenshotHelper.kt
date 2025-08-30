@@ -16,7 +16,7 @@
 
 @file:OptIn(ExperimentalRoborazziApi::class)
 
-package com.google.samples.apps.nowinandroid.core.testing.util
+package com.yourcompany.partygameapp.core.testing.util
 
 import android.graphics.Bitmap.CompressFormat.PNG
 import androidx.activity.ComponentActivity
@@ -46,7 +46,7 @@ import com.google.android.apps.common.testing.accessibility.framework.Accessibil
 import com.google.android.apps.common.testing.accessibility.framework.AccessibilityViewCheckResult
 import com.google.android.apps.common.testing.accessibility.framework.integrations.espresso.AccessibilityViewCheckException
 import com.google.android.apps.common.testing.accessibility.framework.utils.contrast.BitmapImage
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers
 import org.robolectric.RuntimeEnvironment

@@ -16,7 +16,7 @@
 
 @file:Suppress("ktlint:standard:max-line-length")
 
-package com.google.samples.apps.nowinandroid.feature.settings
+package com.yourcompany.partygameapp.feature.settings
 
 import android.content.Intent
 import androidx.compose.animation.AnimatedVisibility
@@ -55,25 +55,25 @@ import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaTextButton
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.supportsDynamicTheming
-import com.google.samples.apps.nowinandroid.core.model.data.DarkThemeConfig
-import com.google.samples.apps.nowinandroid.core.model.data.DarkThemeConfig.DARK
-import com.google.samples.apps.nowinandroid.core.model.data.DarkThemeConfig.FOLLOW_SYSTEM
-import com.google.samples.apps.nowinandroid.core.model.data.DarkThemeConfig.LIGHT
-import com.google.samples.apps.nowinandroid.core.model.data.ThemeBrand
-import com.google.samples.apps.nowinandroid.core.model.data.ThemeBrand.ANDROID
-import com.google.samples.apps.nowinandroid.core.model.data.ThemeBrand.DEFAULT
-import com.google.samples.apps.nowinandroid.core.ui.TrackScreenViewEvent
-import com.google.samples.apps.nowinandroid.feature.settings.R.string
-import com.google.samples.apps.nowinandroid.feature.settings.SettingsUiState.Loading
-import com.google.samples.apps.nowinandroid.feature.settings.SettingsUiState.Success
+import com.yourcompany.partygameapp.core.designsystem.component.NiaTextButton
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.supportsDynamicTheming
+import com.yourcompany.partygameapp.core.model.data.DarkThemeConfig
+import com.yourcompany.partygameapp.core.model.data.DarkThemeConfig.DARK
+import com.yourcompany.partygameapp.core.model.data.DarkThemeConfig.FOLLOW_SYSTEM
+import com.yourcompany.partygameapp.core.model.data.DarkThemeConfig.LIGHT
+import com.yourcompany.partygameapp.core.model.data.ThemeBrand
+import com.yourcompany.partygameapp.core.model.data.ThemeBrand.ANDROID
+import com.yourcompany.partygameapp.core.model.data.ThemeBrand.DEFAULT
+import com.yourcompany.partygameapp.core.ui.TrackScreenViewEvent
+import com.yourcompany.partygameapp.feature.settings.R.string
+import com.yourcompany.partygameapp.feature.settings.SettingsUiState.Loading
+import com.yourcompany.partygameapp.feature.settings.SettingsUiState.Success
 
 @Composable
 fun SettingsDialog(
     onDismiss: () -> Unit,
-    viewModel: SettingsViewModel = hiltViewModel(),
+    viewModel: SettingsViewModel = hilthiltViewModel(),
 ) {
     val settingsUiState by viewModel.settingsUiState.collectAsStateWithLifecycle()
     SettingsDialog(

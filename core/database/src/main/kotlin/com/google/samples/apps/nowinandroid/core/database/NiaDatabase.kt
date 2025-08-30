@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.database
+package com.yourcompany.partygameapp.core.database
 
 import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.google.samples.apps.nowinandroid.core.database.dao.NewsResourceDao
-import com.google.samples.apps.nowinandroid.core.database.dao.NewsResourceFtsDao
-import com.google.samples.apps.nowinandroid.core.database.dao.RecentSearchQueryDao
-import com.google.samples.apps.nowinandroid.core.database.dao.TopicDao
-import com.google.samples.apps.nowinandroid.core.database.dao.TopicFtsDao
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceEntity
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceFtsEntity
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceTopicCrossRef
-import com.google.samples.apps.nowinandroid.core.database.model.RecentSearchQueryEntity
-import com.google.samples.apps.nowinandroid.core.database.model.TopicEntity
-import com.google.samples.apps.nowinandroid.core.database.model.TopicFtsEntity
-import com.google.samples.apps.nowinandroid.core.database.util.InstantConverter
+import com.yourcompany.partygameapp.core.database.dao.NewsResourceDao
+import com.yourcompany.partygameapp.core.database.dao.NewsResourceFtsDao
+import com.yourcompany.partygameapp.core.database.dao.RecentSearchQueryDao
+import com.yourcompany.partygameapp.core.database.dao.TopicDao
+import com.yourcompany.partygameapp.core.database.dao.TopicFtsDao
+import com.yourcompany.partygameapp.core.database.model.NewsResourceEntity
+import com.yourcompany.partygameapp.core.database.model.NewsResourceFtsEntity
+import com.yourcompany.partygameapp.core.database.model.NewsResourceTopicCrossRef
+import com.yourcompany.partygameapp.core.database.model.RecentSearchQueryEntity
+import com.yourcompany.partygameapp.core.database.model.TopicEntity
+import com.yourcompany.partygameapp.core.database.model.TopicFtsEntity
+import com.yourcompany.partygameapp.core.database.util.InstantConverter
 
 @Database(
     entities = [

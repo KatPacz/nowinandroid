@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">Party Game</string>
+    <string name="home_title">Strona główna</string>
+    <string name="home_no_decks">Nie znaleziono żadnych talii dla tego języka.</string>
+    <string name="home_language_select_button">Wybierz język</string>
+
+    <!-- Pre-Game Screen -->
+    <string name="pregame_loading">Ładowanie...</string>
+    <string name="pregame_select_game_mode">Wybierz tryb gry</string>
+    <string name="pregame_pick_or_add_name">Wybierz lub dodaj swoje imię</string>
+    <string name="pregame_add_new_player">Lub dodaj nowego gracza</string>
+    <string name="pregame_add_player_button">DODAJ GRACZA</string>
+    <string name="pregame_start_button">START!</string>
+    <string name="pregame_select_player_placeholder">Wybierz gracza</string>
+    <string name="pregame_deck_category_label">Kategoria: %s</string>
+
+    <!-- Hot Potato Settings -->
+    <string name="hot_potato_settings">Ustawienia Gorącej Ziemniak</string>
+    <string name="hot_potato_time_per_team">Czas na drużynę</string>
+    <string name="hot_potato_max_skips_per_team">Maks. pominięć na drużynę</string>
+    <string name="hot_potato_teams_info">Drużyny zostaną losowo przydzielone spośród wszystkich graczy. Upewnij się, że masz co najmniej 2 graczy!</string>
+    <string name="hot_potato_min_players_warning">Gorący Ziemniak wymaga co najmniej 2 graczy, aby rozpocząć!</string>
+    <string name="pregame_loading_deck">Ładowanie talii...</string>
+    <string name="pregame_game_mode_label">Tryb gry</string>
+    <string name="hot_potato_teams_ready_info">Gracze zostaną losowo przydzieleni do drużyny Czerwonej i Niebieskiej na początku gry.</string>
+
+    <!-- Gameplay Screen -->
+    <string name="gameplay_loading_game">Ładowanie gry...</string>
+    <string name="gameplay_ready_instructions">Obróć telefon poziomo, aby rozpocząć!</string>
+    <string name="gameplay_player_label">Gracz: %s</string>
+    <string name="gameplay_skip_button">POMIŃ</string>
+    <string name="gameplay_correct_button">POPRAWNE</string>
+    <string name="gameplay_game_finished">Gra zakończona!</string>
+    <string name="gameplay_pass_to_player">Przekaż do %1$s w drużynie %2$s!</string>
+
+    <!-- After Game Screen -->
+    <string name="aftergame_title">Koniec gry</string>
+    <string name="aftergame_congrats">Gratulacje %s!</string>
+    <string name="aftergame_score">WYNIK:</string>
+    <string name="aftergame_correct_label">Poprawne</string>
+    <string name="aftergame_incorrect_label">Niepoprawne</string>
+    <string name="aftergame_main_menu_button">MENU GŁÓWNE</string>
+    <string name="aftergame_play_again_button">GRAJ PONOWNIE</string>
+    <string name="aftergame_winning_team_label">Wygrywa drużyna %s!</string>
+
+    <!-- Leaderboard Screen -->
+    <string name="leaderboard_title">Wyniki</string>
+    <string name="leaderboard_rank">Miejsce</string>
+    <string name="leaderboard_player">Gracz</string>
+    <string name="leaderboard_games_played">Rozegrane gry</string>
+    <string name="leaderboard_correct_guesses">Poprawne odpowiedzi</string>
+    <string name="leaderboard_total_points">Łączna liczba punktów</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Ustawienia</string>
+    <string name="settings_penalties">Kary</string>
+    <string name="settings_time_up_penalty">Kara za czas?</string>
+    <string name="settings_give_up_penalty">Kara za poddanie?</string>
+    <string name="settings_card_time">Czas na kartę</string>
+    <string name="settings_card_count">Liczba kart</string>
+    <string name="settings_unit_seconds">s</string>
+
+    <!-- Import/Export Screens -->
+    <string name="import_title">Importuj</string>
+    <string name="import_select_file">WYBIERZ PLIK</string>
+    <string name="import_file_types">tylko .csv lub .txt</string>
+    <string name="import_new_deck_name_label">Nazwa nowej talii</string>
+    <string name="import_deck_name_placeholder">Jaka jest nazwa nowej talii?</string>
+    <string name="import_category_label">Kategoria</string>
+    <string name="import_save_button">ZAPISZ</string>
+    <string name="import_success_toast">\'%s\' zaimportowano pomyślnie!</string>
+    <string name="import_error_toast">Błąd odczytu pliku: %s</string>
+    <string name="import_empty_fields_toast">Nazwa talii i kategoria nie mogą być puste</string>
+
+    <string name="export_title">Eksportuj talie</string>
+    <string name="export_select_decks">Wybierz talie do eksportu</string>
+    <string name="export_all_button">WSZYSTKIE</string>
+    <string name="export_none_button">ŻADNA</string>
+    <string name="export_button">EKSPORTUJ</string>
+    <string name="export_no_decks_selected_toast">Nie wybrano talii do eksportu</string>
+    <string name="export_success_toast">Talia wyeksportowana pomyślnie!</string>
+
+    <string name="home_buy_coffee_button">Postaw mi kawę</string>
+    <string name="leaderboard_no_players">BRAK GRACZY</string>
+
+    <string name="export_no_decks_found">brak talii</string>
+
+    <string name="import_deck_language_label">Język talii</string>
+    <string name="import_no_categories_warning">Nie znaleziono kategorii. Dodaj kategorię, wpisując nową nazwę lub najpierw zaimportuj talię.</string>
+    <string name="hot_potato_red_team">CZERWONI</string>
+    <string name="hot_potato_blue_team">NIEBIESCY</string>
+    <string name="pregame_player_name_label">Wybierz imię</string>
+    <string name="game_mode_standard">Standardowy</string>
+    <string name="game_mode_three_lives">Trzy życia</string>
+    <string name="game_mode_hot_potato">Gorący Ziemniak</string>
+</resources>

@@ -55,4 +55,4 @@ The app and Android libraries have two product flavors: `demo` and `prod`, and t
 
 ## Version control and code location
 
-- The project uses git and is hosted in https://github.com/android/nowinandroid.
+- The project uses git and is hosted in https://github.com/android/partygameapp.

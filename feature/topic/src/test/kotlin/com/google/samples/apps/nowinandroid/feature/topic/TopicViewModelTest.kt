@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.topic
+package com.yourcompany.partygameapp.feature.topic
 
-import com.google.samples.apps.nowinandroid.core.data.repository.CompositeUserNewsResourceRepository
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestNewsRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestTopicsRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestUserDataRepository
-import com.google.samples.apps.nowinandroid.core.testing.util.MainDispatcherRule
+import com.yourcompany.partygameapp.core.data.repository.CompositeUserNewsResourceRepository
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.model.data.Topic
+import com.yourcompany.partygameapp.core.testing.repository.TestNewsRepository
+import com.yourcompany.partygameapp.core.testing.repository.TestTopicsRepository
+import com.yourcompany.partygameapp.core.testing.repository.TestUserDataRepository
+import com.yourcompany.partygameapp.core.testing.util.MainDispatcherRule
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.sync.test
+package com.yourcompany.partygameapp.core.sync.test
 
-import com.google.samples.apps.nowinandroid.core.data.util.SyncManager
-import com.google.samples.apps.nowinandroid.sync.di.SyncModule
-import com.google.samples.apps.nowinandroid.sync.status.StubSyncSubscriber
-import com.google.samples.apps.nowinandroid.sync.status.SyncSubscriber
+import com.yourcompany.partygameapp.core.data.util.SyncManager
+import com.yourcompany.partygameapp.sync.di.SyncModule
+import com.yourcompany.partygameapp.sync.status.StubSyncSubscriber
+import com.yourcompany.partygameapp.sync.status.SyncSubscriber
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.components.SingletonComponent

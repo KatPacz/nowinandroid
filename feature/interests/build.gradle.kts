@@ -15,12 +15,12 @@
  */
 
 plugins {
-    alias(libs.plugins.nowinandroid.android.feature)
-    alias(libs.plugins.nowinandroid.android.library.compose)
-    alias(libs.plugins.nowinandroid.android.library.jacoco)
+    alias(libs.plugins.partygameapp.android.feature)
+    alias(libs.plugins.partygameapp.android.library.compose)
+    alias(libs.plugins.partygameapp.android.library.jacoco)
 }
 android {
-    namespace = "com.google.samples.apps.nowinandroid.feature.interests"
+    namespace = "com.yourcompany.partygameapp.feature.interests"
 }
 
 dependencies {

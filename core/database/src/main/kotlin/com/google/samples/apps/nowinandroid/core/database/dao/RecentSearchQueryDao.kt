@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.database.dao
+package com.yourcompany.partygameapp.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Upsert
-import com.google.samples.apps.nowinandroid.core.database.model.RecentSearchQueryEntity
+import com.yourcompany.partygameapp.core.database.model.RecentSearchQueryEntity
 import kotlinx.coroutines.flow.Flow
 
 /**

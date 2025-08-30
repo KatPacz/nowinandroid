@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>NiaApplication.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #5f826b; font-style: italic;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+NiaApplication.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * Copyright 2022 The Android Open Source Project 
+ * 
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ * 
+ *     https://www.apache.org/licenses/LICENSE-2.0 
+ * 
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License. 
+ */</span>
+
+<span class="s2">package </span><span class="s1">com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span>
+
+<span class="s1">import android</span><span class="s3">.</span><span class="s1">app</span><span class="s3">.</span><span class="s1">Application</span>
+<span class="s1">import android</span><span class="s3">.</span><span class="s1">content</span><span class="s3">.</span><span class="s1">pm</span><span class="s3">.</span><span class="s1">ApplicationInfo</span>
+<span class="s1">import android</span><span class="s3">.</span><span class="s1">os</span><span class="s3">.</span><span class="s1">StrictMode</span>
+<span class="s1">import android</span><span class="s3">.</span><span class="s1">os</span><span class="s3">.</span><span class="s1">StrictMode</span><span class="s3">.</span><span class="s1">ThreadPolicy</span><span class="s3">.</span><span class="s1">Builder</span>
+<span class="s1">import coil</span><span class="s3">.</span><span class="s1">ImageLoader</span>
+<span class="s1">import coil</span><span class="s3">.</span><span class="s1">ImageLoaderFactory</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">sync</span><span class="s3">.</span><span class="s1">initializers</span><span class="s3">.</span><span class="s1">Sync</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">util</span><span class="s3">.</span><span class="s1">ProfileVerifierLogger</span>
+<span class="s1">import dagger</span><span class="s3">.</span><span class="s1">hilt</span><span class="s3">.</span><span class="s1">android</span><span class="s3">.</span><span class="s1">HiltAndroidApp</span>
+<span class="s1">import javax</span><span class="s3">.</span><span class="s1">inject</span><span class="s3">.</span><span class="s1">Inject</span>
+
+<span class="s4">/**</span>
+ <span class="s4">* [Application] class for NiA</span>
+ <span class="s4">*/</span>
+<span class="s1">@HiltAndroidApp</span>
+<span class="s2">class </span><span class="s1">NiaApplication : Application</span><span class="s3">(), </span><span class="s1">ImageLoaderFactory </span><span class="s3">{</span>
+    <span class="s1">@Inject</span>
+    <span class="s1">lateinit </span><span class="s2">var </span><span class="s1">imageLoader: dagger</span><span class="s3">.</span><span class="s1">Lazy</span><span class="s3">&lt;</span><span class="s1">ImageLoader</span><span class="s3">&gt;</span>
+
+    <span class="s1">@Inject</span>
+    <span class="s1">lateinit </span><span class="s2">var </span><span class="s1">profileVerifierLogger: ProfileVerifierLogger</span>
+
+    <span class="s1">override </span><span class="s2">fun </span><span class="s1">onCreate</span><span class="s3">() {</span>
+        <span class="s2">super</span><span class="s3">.</span><span class="s1">onCreate</span><span class="s3">()</span>
+
+        <span class="s1">setStrictModePolicy</span><span class="s3">()</span>
+
+        <span class="s0">// Initialize Sync; the system responsible for keeping data in the app up to date.</span>
+        <span class="s1">Sync</span><span class="s3">.</span><span class="s1">initialize</span><span class="s3">(</span><span class="s1">context </span><span class="s3">= </span><span class="s2">this</span><span class="s3">)</span>
+        <span class="s1">profileVerifierLogger</span><span class="s3">()</span>
+    <span class="s3">}</span>
+
+    <span class="s1">override </span><span class="s2">fun </span><span class="s1">newImageLoader</span><span class="s3">()</span><span class="s1">: ImageLoader </span><span class="s3">= </span><span class="s1">imageLoader</span><span class="s3">.</span><span class="s1">get</span><span class="s3">()</span>
+
+    <span class="s4">/**</span>
+     <span class="s4">* Return true if the application is debuggable.</span>
+     <span class="s4">*/</span>
+    <span class="s1">private </span><span class="s2">fun </span><span class="s1">isDebuggable</span><span class="s3">()</span><span class="s1">: Boolean </span><span class="s3">{</span>
+        <span class="s2">return </span><span class="s5">0 </span><span class="s3">!= </span><span class="s1">applicationInfo</span><span class="s3">.</span><span class="s1">flags and ApplicationInfo</span><span class="s3">.</span><span class="s1">FLAG_DEBUGGABLE</span>
+    <span class="s3">}</span>
+
+    <span class="s4">/**</span>
+     <span class="s4">* Set a thread policy that detects all potential problems on the main thread, such as network</span>
+     <span class="s4">* and disk access.</span>
+     <span class="s4">*</span>
+     <span class="s4">* If a problem is found, the offending call will be logged and the application will be killed.</span>
+     <span class="s4">*/</span>
+    <span class="s1">private </span><span class="s2">fun </span><span class="s1">setStrictModePolicy</span><span class="s3">() {</span>
+        <span class="s2">if </span><span class="s3">(</span><span class="s1">isDebuggable</span><span class="s3">()) {</span>
+            <span class="s1">StrictMode</span><span class="s3">.</span><span class="s1">setThreadPolicy</span><span class="s3">(</span>
+                <span class="s1">Builder</span><span class="s3">().</span><span class="s1">detectAll</span><span class="s3">().</span><span class="s1">penaltyLog</span><span class="s3">().</span><span class="s1">build</span><span class="s3">(),</span>
+            <span class="s3">)</span>
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+<span class="s3">}</span>
+</pre>
+</body>
+</html>

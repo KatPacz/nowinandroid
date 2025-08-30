@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.repository
+package com.yourcompany.partygameapp.core.data.repository
 
-import com.google.samples.apps.nowinandroid.core.data.Syncable
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
+import com.yourcompany.partygameapp.core.data.Syncable
+import com.yourcompany.partygameapp.core.model.data.Topic
 import kotlinx.coroutines.flow.Flow
 
 interface TopicsRepository : Syncable {

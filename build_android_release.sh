@@ -21,17 +21,17 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 APP_OUT=$DIR/app/build/outputs
 
-export JAVA_HOME="$(cd $DIR/../nowinandroid-prebuilts/jdk17/linux && pwd )"
+export JAVA_HOME="$(cd $DIR/../partygameapp-prebuilts/jdk17/linux && pwd )"
 echo "JAVA_HOME=$JAVA_HOME"
 
 export ANDROID_HOME="$(cd $DIR/../../../prebuilts/fullsdk/linux && pwd )"
 echo "ANDROID_HOME=$ANDROID_HOME"
 
 echo "Copying google-services.json"
-cp $DIR/../nowinandroid-prebuilts/google-services.json $DIR/app
+cp $DIR/../partygameapp-prebuilts/google-services.json $DIR/app
 
 echo "Copying local.properties"
-cp $DIR/../nowinandroid-prebuilts/local.properties $DIR
+cp $DIR/../partygameapp-prebuilts/local.properties $DIR
 
 cd $DIR
 

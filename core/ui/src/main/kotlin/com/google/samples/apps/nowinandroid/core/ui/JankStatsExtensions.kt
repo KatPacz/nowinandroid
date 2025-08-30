@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.ui
+package com.yourcompany.partygameapp.core.ui
 
 import androidx.compose.foundation.gestures.ScrollableState
 import androidx.compose.runtime.Composable

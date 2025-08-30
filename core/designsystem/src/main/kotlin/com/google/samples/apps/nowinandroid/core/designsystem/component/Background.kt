@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.designsystem.component
+package com.yourcompany.partygameapp.core.designsystem.component
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Box
@@ -34,10 +34,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.GradientColors
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LocalBackgroundTheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LocalGradientColors
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.GradientColors
+import com.yourcompany.partygameapp.core.designsystem.theme.LocalBackgroundTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.LocalGradientColors
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
 import kotlin.math.tan
 
 /**

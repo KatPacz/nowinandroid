@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.designsystem.component
+package com.yourcompany.partygameapp.core.designsystem.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -39,8 +39,8 @@ import coil.compose.AsyncImage
 import coil.compose.AsyncImagePainter.State.Error
 import coil.compose.AsyncImagePainter.State.Loading
 import coil.compose.rememberAsyncImagePainter
-import com.google.samples.apps.nowinandroid.core.designsystem.R
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LocalTintTheme
+import com.yourcompany.partygameapp.core.designsystem.R
+import com.yourcompany.partygameapp.core.designsystem.theme.LocalTintTheme
 
 /**
  * A wrapper around [AsyncImage] which determines the colorFilter based on the theme

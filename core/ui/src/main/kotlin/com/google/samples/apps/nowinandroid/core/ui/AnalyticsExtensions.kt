@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.ui
+package com.yourcompany.partygameapp.core.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent.Param
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent.ParamKeys
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent.Types
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsHelper
-import com.google.samples.apps.nowinandroid.core.analytics.LocalAnalyticsHelper
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent.Param
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent.ParamKeys
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent.Types
+import com.yourcompany.partygameapp.core.analytics.AnalyticsHelper
+import com.yourcompany.partygameapp.core.analytics.LocalAnalyticsHelper
 
 /**
  * Classes and functions associated with analytics events for the UI.

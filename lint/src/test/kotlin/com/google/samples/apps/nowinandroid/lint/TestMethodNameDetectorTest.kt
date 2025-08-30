@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.lint
+package com.yourcompany.partygameapp.lint
 
 import com.android.tools.lint.checks.infrastructure.TestFile
 import com.android.tools.lint.checks.infrastructure.TestFiles.kotlin
 import com.android.tools.lint.checks.infrastructure.TestLintTask.lint
-import com.google.samples.apps.nowinandroid.lint.TestMethodNameDetector.Companion.FORMAT
-import com.google.samples.apps.nowinandroid.lint.TestMethodNameDetector.Companion.PREFIX
+import com.yourcompany.partygameapp.lint.TestMethodNameDetector.Companion.FORMAT
+import com.yourcompany.partygameapp.lint.TestMethodNameDetector.Companion.PREFIX
 import org.junit.Test
 
 class TestMethodNameDetectorTest {

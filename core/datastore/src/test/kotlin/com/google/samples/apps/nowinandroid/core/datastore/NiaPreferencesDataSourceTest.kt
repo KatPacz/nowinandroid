@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.datastore
+package com.yourcompany.partygameapp.core.datastore
 
-import com.google.samples.apps.nowinandroid.core.datastore.test.InMemoryDataStore
+import com.yourcompany.partygameapp.core.datastore.test.InMemoryDataStore
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.UnconfinedTestDispatcher

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.domain
+package com.yourcompany.partygameapp.core.domain
 
-import com.google.samples.apps.nowinandroid.core.data.model.RecentSearchQuery
-import com.google.samples.apps.nowinandroid.core.data.repository.RecentSearchRepository
+import com.yourcompany.partygameapp.core.data.model.RecentSearchQuery
+import com.yourcompany.partygameapp.core.data.repository.RecentSearchRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

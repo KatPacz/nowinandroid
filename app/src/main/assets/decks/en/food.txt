@@ -1,0 +1,240 @@
+
+Apple
+Apricot
+Artichoke
+Asparagus
+Avocado
+Bacon
+Bagel
+Baguette
+Banana
+Barley
+Basil
+Beans
+Beef
+Beetroot
+Bell Pepper
+Biscuit
+Blackberry
+Blueberry
+Bok Choy
+Bread
+Broccoli
+Brown Rice
+Brussels Sprouts
+Butter
+Butternut Squash
+Cabbage
+Cake
+Calamari
+Candy
+Cantaloupe
+Capers
+Caramel
+Carrot
+Cashew
+Cauliflower
+Celery
+Cereal
+Cheese
+Cherries
+Chestnut
+Chicken
+Chickpeas
+Chili
+Chives
+Chocolate
+Churros
+Clams
+Coconut
+Cod
+Coffee
+Collard Greens
+Cookie
+Corn
+Couscous
+Crab
+Cranberries
+Cream
+Cucumber
+Cupcake
+Curry
+Dates
+Doughnut
+Dragon Fruit
+Duck
+Dumplings
+Edamame
+Egg
+Eggplant
+Elderberry
+Enchiladas
+Fennel
+Feta Cheese
+Fig
+Fish
+Flan
+Flour
+French Fries
+Garlic
+Gelato
+Ginger
+Gnocchi
+Goat Cheese
+Granola
+Grapefruit
+Grapes
+Green Beans
+Guacamole
+Guava
+Ham
+Hamburger
+Hazelnut
+Honey
+Honeydew
+Hot Dog
+Hummus
+Ice Cream
+Jackfruit
+Jalapeño
+Jam
+Jasmine Rice
+Jicama
+Kale
+Ketchup
+Kidney Beans
+Kimchi
+Kiwi
+Lamb
+Lasagna
+Leek
+Lemon
+Lentils
+Lettuce
+Lime
+Lobster
+Lychee
+Macaroni
+Mackerel
+Mango
+Maple Syrup
+Marshmallow
+Mashed Potatoes
+Mayonnaise
+Melon
+Milk
+Millet
+Mint
+Mochi
+Molasses
+Mousse
+Muffin
+Mushroom
+Mussels
+Mustard
+Naan
+Nachos
+Nectarine
+Noodles
+Nutmeg
+Nuts
+Oatmeal
+Oats
+Okra
+Olive
+Omelette
+Onion
+Orange
+Oregano
+Oyster
+Papaya
+Parsley
+Passion Fruit
+Pasta
+Pastry
+Peach
+Peanut
+Peanut Butter
+Pear
+Peas
+Pecan
+Pepper
+Pickles
+Pineapple
+Pistachio
+Pizza
+Plum
+Pomegranate
+Popcorn
+Pork
+Potato
+Pretzel
+Prosciutto
+Prunes
+Pumpkin
+Quiche
+Quinoa
+Radish
+Raisins
+Ramen
+Raspberry
+Red Cabbage
+Rhubarb
+Rice
+Ricotta
+Roast Beef
+Rosemary
+Saffron
+Sage
+Salad
+Salmon
+Salsa
+Salt
+Sandwich
+Sardines
+Sausage
+Scallops
+Sesame
+Shallot
+Shrimp
+Smoothie
+Sorbet
+Soy Sauce
+Spaghetti
+Spinach
+Squash
+Steak
+Strawberry
+Sugar
+Sunflower Seeds
+Sushi
+Sweet Potato
+Swiss Cheese
+Syrup
+Tacos
+Tangerine
+Tapioca
+Tea
+Thyme
+Tilapia
+Tofu
+Tomato
+Tortilla
+Truffle
+Tuna
+Turkey
+Turnip
+Vanilla
+Veal
+Vegetable Soup
+Vinegar
+Waffles
+Walnut
+Wasabi
+Watercress
+Watermelon
+Wheat
+White Rice
+Yam
+Yogurt
+Zucchini

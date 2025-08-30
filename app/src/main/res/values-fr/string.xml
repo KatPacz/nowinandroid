@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">Party Game</string>
+    <string name="home_title">Accueil</string>
+    <string name="home_no_decks">Aucun deck trouvé pour cette langue.</string>
+    <string name="home_language_select_button">Choisir la langue</string>
+
+    <!-- Pre-Game Screen -->
+    <string name="pregame_loading" translatable="false">Chargement...</string>
+    <string name="pregame_select_game_mode">Sélectionnez le mode de jeu</string>
+    <string name="pregame_pick_or_add_name">Choisissez ou ajoutez votre nom</string>
+    <string name="pregame_add_new_player">Ou ajoutez un nouveau joueur</string>
+    <string name="pregame_add_player_button">AJOUTER UN JOUEUR</string>
+    <string name="pregame_start_button">DÉMARRER !</string>
+    <string name="pregame_select_player_placeholder">Sélectionnez un joueur</string>
+    <string name="pregame_deck_category_label">Catégorie : %s</string>
+
+    <!-- Hot Potato Settings -->
+    <string name="hot_potato_settings">Paramètres de la Patate Chaude</string>
+    <string name="hot_potato_time_per_team">Temps par équipe</string>
+    <string name="hot_potato_max_skips_per_team">Sauts max par équipe</string>
+    <string name="hot_potato_teams_info">Les équipes seront attribuées aléatoirement parmi tous les joueurs. Assurez-vous d’avoir au moins 2 joueurs !</string>
+    <string name="hot_potato_min_players_warning">La Patate Chaude nécessite au moins 2 joueurs pour commencer !</string>
+    <string name="pregame_loading_deck">Chargement du deck...</string>
+    <string name="pregame_game_mode_label">Mode de jeu</string>
+    <string name="hot_potato_teams_ready_info">Les joueurs seront assignés aléatoirement aux équipes Rouge et Bleue au début du jeu.</string>
+
+    <!-- Gameplay Screen -->
+    <string name="gameplay_loading_game">Chargement du jeu...</string>
+    <string name="gameplay_ready_instructions">Tournez votre téléphone à l’horizontale pour commencer !</string>
+    <string name="gameplay_player_label">Joueur : %s</string>
+    <string name="gameplay_skip_button">PASSER</string>
+    <string name="gameplay_correct_button">CORRECT</string>
+    <string name="gameplay_game_finished">Jeu terminé !</string>
+    <string name="gameplay_pass_to_player">Passez à %1$s de l’équipe %2$s !</string>
+
+    <!-- After Game Screen -->
+    <string name="aftergame_title">Fin du jeu</string>
+    <string name="aftergame_congrats">Félicitations %s !</string>
+    <string name="aftergame_score">SCORE :</string>
+    <string name="aftergame_correct_label">Correct</string>
+    <string name="aftergame_incorrect_label">Incorrect</string>
+    <string name="aftergame_main_menu_button">MENU PRINCIPAL</string>
+    <string name="aftergame_play_again_button">REJOUER</string>
+    <string name="aftergame_winning_team_label">L’équipe %s gagne !</string>
+
+    <!-- Leaderboard Screen -->
+    <string name="leaderboard_title">Classement</string>
+    <string name="leaderboard_rank">Rang</string>
+    <string name="leaderboard_player">Joueur</string>
+    <string name="leaderboard_games_played">Parties jouées</string>
+    <string name="leaderboard_correct_guesses">Réponses correctes</string>
+    <string name="leaderboard_total_points">Points totaux</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_penalties">Pénalités</string>
+    <string name="settings_time_up_penalty">Pénalité si le temps est écoulé ?</string>
+    <string name="settings_give_up_penalty">Pénalité en cas d’abandon ?</string>
+    <string name="settings_card_time">Temps par carte</string>
+    <string name="settings_card_count">Nombre de cartes</string>
+    <string name="settings_unit_seconds">s</string>
+
+    <!-- Import/Export Screens -->
+    <string name="import_title">Importer</string>
+    <string name="import_select_file">SÉLECTIONNER LE FICHIER</string>
+    <string name="import_file_types">uniquement .csv ou .txt</string>
+    <string name="import_new_deck_name_label">Nom du nouveau deck</string>
+    <string name="import_deck_name_placeholder">Quel est le nom du nouveau deck ?</string>
+    <string name="import_category_label">Catégorie</string>
+    <string name="import_save_button">ENREGISTRER</string>
+    <string name="import_success_toast">‘%s’ importé avec succès !</string>
+    <string name="import_error_toast">Erreur lors de la lecture du fichier : %s</string>
+    <string name="import_empty_fields_toast">Le nom du deck et la catégorie ne peuvent pas être vides</string>
+
+    <string name="export_title">Exporter les decks</string>
+    <string name="export_select_decks">Sélectionnez les decks à exporter</string>
+    <string name="export_all_button">TOUS</string>
+    <string name="export_none_button">AUCUN</string>
+    <string name="export_button">EXPORTER</string>
+    <string name="export_no_decks_selected_toast">Aucun deck sélectionné pour l’export</string>
+    <string name="export_success_toast">Deck exporté avec succès !</string>
+
+    <string name="home_buy_coffee_button">Offrez-moi un café</string>
+    <string name="leaderboard_no_players">AUCUN JOUEUR</string>
+
+    <string name="export_no_decks_found">aucun deck</string>
+
+    <string name="import_deck_language_label">Langue du deck</string>
+    <string name="import_no_categories_warning">Aucune catégorie trouvée. Veuillez ajouter une catégorie en saisissant un nouveau nom ou importer un deck d’abord.</string>
+    <string name="hot_potato_red_team">ROUGE</string>
+    <string name="hot_potato_blue_team">BLEU</string>
+    <string name="pregame_player_name_label">Pick a name</string>
+    <string name="game_mode_standard">Standard</string>
+    <string name="game_mode_three_lives" >Three lives</string>
+    <string name="game_mode_hot_potato" >Hot Potato</string>
+</resources>

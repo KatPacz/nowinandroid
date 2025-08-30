@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.interests
+package com.yourcompany.partygameapp.interests
 
 import androidx.benchmark.macro.MacrobenchmarkScope
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.Until
-import com.google.samples.apps.nowinandroid.flingElementDownUp
-import com.google.samples.apps.nowinandroid.waitForObjectOnTopAppBar
+import com.yourcompany.partygameapp.flingElementDownUp
+import com.yourcompany.partygameapp.waitForObjectOnTopAppBar
 
 fun MacrobenchmarkScope.goToInterestsScreen() {
     device.findObject(By.text("Interests")).click()

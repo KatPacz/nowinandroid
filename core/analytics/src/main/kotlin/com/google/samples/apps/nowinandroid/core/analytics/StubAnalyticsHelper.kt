@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.analytics
+package com.yourcompany.partygameapp.core.analytics
 
 import android.util.Log
 import javax.inject.Inject

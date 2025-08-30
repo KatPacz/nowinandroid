@@ -14,27 +14,27 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.foryou
+package com.yourcompany.partygameapp.feature.foryou
 
 import androidx.lifecycle.SavedStateHandle
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent
-import com.google.samples.apps.nowinandroid.core.analytics.AnalyticsEvent.Param
-import com.google.samples.apps.nowinandroid.core.data.repository.CompositeUserNewsResourceRepository
-import com.google.samples.apps.nowinandroid.core.domain.GetFollowableTopicsUseCase
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
-import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
-import com.google.samples.apps.nowinandroid.core.model.data.mapToUserNewsResources
-import com.google.samples.apps.nowinandroid.core.notifications.DEEP_LINK_NEWS_RESOURCE_ID_KEY
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestNewsRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestTopicsRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.TestUserDataRepository
-import com.google.samples.apps.nowinandroid.core.testing.repository.emptyUserData
-import com.google.samples.apps.nowinandroid.core.testing.util.MainDispatcherRule
-import com.google.samples.apps.nowinandroid.core.testing.util.TestAnalyticsHelper
-import com.google.samples.apps.nowinandroid.core.testing.util.TestSyncManager
-import com.google.samples.apps.nowinandroid.core.ui.NewsFeedUiState
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent
+import com.yourcompany.partygameapp.core.analytics.AnalyticsEvent.Param
+import com.yourcompany.partygameapp.core.data.repository.CompositeUserNewsResourceRepository
+import com.yourcompany.partygameapp.core.domain.GetFollowableTopicsUseCase
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.model.data.Topic
+import com.yourcompany.partygameapp.core.model.data.UserNewsResource
+import com.yourcompany.partygameapp.core.model.data.mapToUserNewsResources
+import com.yourcompany.partygameapp.core.notifications.DEEP_LINK_NEWS_RESOURCE_ID_KEY
+import com.yourcompany.partygameapp.core.testing.repository.TestNewsRepository
+import com.yourcompany.partygameapp.core.testing.repository.TestTopicsRepository
+import com.yourcompany.partygameapp.core.testing.repository.TestUserDataRepository
+import com.yourcompany.partygameapp.core.testing.repository.emptyUserData
+import com.yourcompany.partygameapp.core.testing.util.MainDispatcherRule
+import com.yourcompany.partygameapp.core.testing.util.TestAnalyticsHelper
+import com.yourcompany.partygameapp.core.testing.util.TestSyncManager
+import com.yourcompany.partygameapp.core.ui.NewsFeedUiState
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch

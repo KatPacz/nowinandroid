@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.interests
+package com.yourcompany.partygameapp.interests
 
 import android.os.Build.VERSION_CODES
 import androidx.annotation.RequiresApi
@@ -28,12 +28,12 @@ import androidx.benchmark.macro.StartupMode
 import androidx.benchmark.macro.junit4.MacrobenchmarkRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.uiautomator.By
-import com.google.samples.apps.nowinandroid.PACKAGE_NAME
-import com.google.samples.apps.nowinandroid.allowNotifications
-import com.google.samples.apps.nowinandroid.foryou.forYouScrollFeedDownUp
-import com.google.samples.apps.nowinandroid.foryou.forYouSelectTopics
-import com.google.samples.apps.nowinandroid.foryou.forYouWaitForContent
-import com.google.samples.apps.nowinandroid.foryou.setAppTheme
+import com.yourcompany.partygameapp.PACKAGE_NAME
+import com.yourcompany.partygameapp.allowNotifications
+import com.yourcompany.partygameapp.foryou.forYouScrollFeedDownUp
+import com.yourcompany.partygameapp.foryou.forYouSelectTopics
+import com.yourcompany.partygameapp.foryou.forYouWaitForContent
+import com.yourcompany.partygameapp.foryou.setAppTheme
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

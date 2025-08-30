@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>MainActivityViewModel.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #2aacb8;}
+.s5 { color: #5f826b; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivityViewModel.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * Copyright 2022 The Android Open Source Project 
+ * 
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ * 
+ *     https://www.apache.org/licenses/LICENSE-2.0 
+ * 
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License. 
+ */</span>
+
+<span class="s2">package </span><span class="s1">com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span>
+
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">lifecycle</span><span class="s3">.</span><span class="s1">ViewModel</span>
+<span class="s1">import androidx</span><span class="s3">.</span><span class="s1">lifecycle</span><span class="s3">.</span><span class="s1">viewModelScope</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">MainActivityUiState</span><span class="s3">.</span><span class="s1">Loading</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">MainActivityUiState</span><span class="s3">.</span><span class="s1">Success</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">core</span><span class="s3">.</span><span class="s1">data</span><span class="s3">.</span><span class="s1">repository</span><span class="s3">.</span><span class="s1">UserDataRepository</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">core</span><span class="s3">.</span><span class="s1">model</span><span class="s3">.</span><span class="s1">data</span><span class="s3">.</span><span class="s1">DarkThemeConfig</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">core</span><span class="s3">.</span><span class="s1">model</span><span class="s3">.</span><span class="s1">data</span><span class="s3">.</span><span class="s1">ThemeBrand</span>
+<span class="s1">import com</span><span class="s3">.</span><span class="s1">google</span><span class="s3">.</span><span class="s1">samples</span><span class="s3">.</span><span class="s1">apps</span><span class="s3">.</span><span class="s1">partygameapp</span><span class="s3">.</span><span class="s1">core</span><span class="s3">.</span><span class="s1">model</span><span class="s3">.</span><span class="s1">data</span><span class="s3">.</span><span class="s1">UserData</span>
+<span class="s1">import dagger</span><span class="s3">.</span><span class="s1">hilt</span><span class="s3">.</span><span class="s1">android</span><span class="s3">.</span><span class="s1">lifecycle</span><span class="s3">.</span><span class="s1">HiltViewModel</span>
+<span class="s1">import kotlinx</span><span class="s3">.</span><span class="s1">coroutines</span><span class="s3">.</span><span class="s1">flow</span><span class="s3">.</span><span class="s1">SharingStarted</span>
+<span class="s1">import kotlinx</span><span class="s3">.</span><span class="s1">coroutines</span><span class="s3">.</span><span class="s1">flow</span><span class="s3">.</span><span class="s1">StateFlow</span>
+<span class="s1">import kotlinx</span><span class="s3">.</span><span class="s1">coroutines</span><span class="s3">.</span><span class="s1">flow</span><span class="s3">.</span><span class="s1">map</span>
+<span class="s1">import kotlinx</span><span class="s3">.</span><span class="s1">coroutines</span><span class="s3">.</span><span class="s1">flow</span><span class="s3">.</span><span class="s1">stateIn</span>
+<span class="s1">import javax</span><span class="s3">.</span><span class="s1">inject</span><span class="s3">.</span><span class="s1">Inject</span>
+
+<span class="s1">@HiltViewModel</span>
+<span class="s2">class </span><span class="s1">MainActivityViewModel @Inject constructor</span><span class="s3">(</span>
+    <span class="s1">userDataRepository: UserDataRepository</span><span class="s3">,</span>
+<span class="s3">) </span><span class="s1">: ViewModel</span><span class="s3">() {</span>
+    <span class="s2">val </span><span class="s1">uiState: StateFlow</span><span class="s3">&lt;</span><span class="s1">MainActivityUiState</span><span class="s3">&gt; = </span><span class="s1">userDataRepository</span><span class="s3">.</span><span class="s1">userData</span><span class="s3">.</span><span class="s1">map </span><span class="s3">{</span>
+        <span class="s1">Success</span><span class="s3">(</span><span class="s1">it</span><span class="s3">)</span>
+    <span class="s3">}.</span><span class="s1">stateIn</span><span class="s3">(</span>
+        <span class="s1">scope </span><span class="s3">= </span><span class="s1">viewModelScope</span><span class="s3">,</span>
+        <span class="s1">initialValue </span><span class="s3">= </span><span class="s1">Loading</span><span class="s3">,</span>
+        <span class="s1">started </span><span class="s3">= </span><span class="s1">SharingStarted</span><span class="s3">.</span><span class="s1">WhileSubscribed</span><span class="s3">(</span><span class="s4">5_000</span><span class="s3">),</span>
+    <span class="s3">)</span>
+<span class="s3">}</span>
+
+<span class="s1">sealed </span><span class="s2">interface </span><span class="s1">MainActivityUiState </span><span class="s3">{</span>
+    <span class="s1">data </span><span class="s2">object </span><span class="s1">Loading : MainActivityUiState</span>
+
+    <span class="s1">data </span><span class="s2">class </span><span class="s1">Success</span><span class="s3">(</span><span class="s2">val </span><span class="s1">userData: UserData</span><span class="s3">) </span><span class="s1">: MainActivityUiState </span><span class="s3">{</span>
+        <span class="s1">override </span><span class="s2">val </span><span class="s1">shouldDisableDynamicTheming </span><span class="s3">= !</span><span class="s1">userData</span><span class="s3">.</span><span class="s1">useDynamicColor</span>
+
+        <span class="s1">override </span><span class="s2">val </span><span class="s1">shouldUseAndroidTheme: Boolean </span><span class="s3">= </span><span class="s2">when </span><span class="s3">(</span><span class="s1">userData</span><span class="s3">.</span><span class="s1">themeBrand</span><span class="s3">) {</span>
+            <span class="s1">ThemeBrand</span><span class="s3">.</span><span class="s1">DEFAULT </span><span class="s3">-&gt; </span><span class="s2">false</span>
+            <span class="s1">ThemeBrand</span><span class="s3">.</span><span class="s1">ANDROID </span><span class="s3">-&gt; </span><span class="s2">true</span>
+        <span class="s3">}</span>
+
+        <span class="s1">override </span><span class="s2">fun </span><span class="s1">shouldUseDarkTheme</span><span class="s3">(</span><span class="s1">isSystemDarkTheme: Boolean</span><span class="s3">) =</span>
+            <span class="s2">when </span><span class="s3">(</span><span class="s1">userData</span><span class="s3">.</span><span class="s1">darkThemeConfig</span><span class="s3">) {</span>
+                <span class="s1">DarkThemeConfig</span><span class="s3">.</span><span class="s1">FOLLOW_SYSTEM </span><span class="s3">-&gt; </span><span class="s1">isSystemDarkTheme</span>
+                <span class="s1">DarkThemeConfig</span><span class="s3">.</span><span class="s1">LIGHT </span><span class="s3">-&gt; </span><span class="s2">false</span>
+                <span class="s1">DarkThemeConfig</span><span class="s3">.</span><span class="s1">DARK </span><span class="s3">-&gt; </span><span class="s2">true</span>
+            <span class="s3">}</span>
+    <span class="s3">}</span>
+
+    <span class="s5">/**</span>
+     <span class="s5">* Returns `true` if the state wasn't loaded yet and it should keep showing the splash screen.</span>
+     <span class="s5">*/</span>
+    <span class="s2">fun </span><span class="s1">shouldKeepSplashScreen</span><span class="s3">() = </span><span class="s2">this is </span><span class="s1">Loading</span>
+
+    <span class="s5">/**</span>
+     <span class="s5">* Returns `true` if the dynamic color is disabled.</span>
+     <span class="s5">*/</span>
+    <span class="s2">val </span><span class="s1">shouldDisableDynamicTheming: Boolean get</span><span class="s3">() = </span><span class="s2">true</span>
+
+    <span class="s5">/**</span>
+     <span class="s5">* Returns `true` if the Android theme should be used.</span>
+     <span class="s5">*/</span>
+    <span class="s2">val </span><span class="s1">shouldUseAndroidTheme: Boolean get</span><span class="s3">() = </span><span class="s2">false</span>
+
+    <span class="s5">/**</span>
+     <span class="s5">* Returns `true` if dark theme should be used.</span>
+     <span class="s5">*/</span>
+    <span class="s2">fun </span><span class="s1">shouldUseDarkTheme</span><span class="s3">(</span><span class="s1">isSystemDarkTheme: Boolean</span><span class="s3">) = </span><span class="s1">isSystemDarkTheme</span>
+<span class="s3">}</span>
+</pre>
+</body>
+</html>

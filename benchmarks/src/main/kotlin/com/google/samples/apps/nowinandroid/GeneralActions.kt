@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid
+package com.yourcompany.partygameapp
 
 import android.Manifest.permission
 import android.os.Build.VERSION.SDK_INT

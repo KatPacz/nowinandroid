@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    if: github.repository == 'android/nowinandroid'
+    if: github.repository == 'android/partygameapp'
     runs-on: ubuntu-latest
     timeout-minutes: 120
 

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import com.google.samples.apps.nowinandroid.FlavorDimension
-import com.google.samples.apps.nowinandroid.NiaFlavor
+import com.yourcompany.partygameapp.FlavorDimension
+import com.yourcompany.partygameapp.NiaFlavor
 
 /*
  * Copyright 2022 The Android Open Source Project
@@ -32,13 +32,13 @@ import com.google.samples.apps.nowinandroid.NiaFlavor
  * limitations under the License.
  */
 plugins {
-    alias(libs.plugins.nowinandroid.android.application)
-    alias(libs.plugins.nowinandroid.android.application.compose)
+    alias(libs.plugins.partygameapp.android.application)
+    alias(libs.plugins.partygameapp.android.application.compose)
 }
 
 android {
     defaultConfig {
-        applicationId = "com.google.samples.apps.niacatalog"
+        applicationId = "com.yourcompany.niacatalog"
         versionCode = 1
         versionName = "0.0.1" // X.Y.Z; X = Major, Y = minor, Z = Patch level
 
@@ -52,7 +52,7 @@ android {
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
     }
-    namespace = "com.google.samples.apps.niacatalog"
+    namespace = "com.yourcompany.niacatalog"
 
     buildTypes {
         release {

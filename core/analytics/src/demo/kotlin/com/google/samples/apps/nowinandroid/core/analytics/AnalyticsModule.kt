@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.analytics
+package com.yourcompany.partygameapp.core.analytics
 
 import dagger.Binds
 import dagger.Module

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.topic
+package com.yourcompany.partygameapp.feature.topic
 
 import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.gestures.Orientation
@@ -52,23 +52,23 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.google.samples.apps.nowinandroid.core.designsystem.component.DynamicAsyncImage
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaBackground
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaFilterChip
-import com.google.samples.apps.nowinandroid.core.designsystem.component.NiaLoadingWheel
-import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.DraggableScrollbar
-import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.rememberDraggableScroller
-import com.google.samples.apps.nowinandroid.core.designsystem.component.scrollbar.scrollbarState
-import com.google.samples.apps.nowinandroid.core.designsystem.icon.NiaIcons
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
-import com.google.samples.apps.nowinandroid.core.model.data.FollowableTopic
-import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
-import com.google.samples.apps.nowinandroid.core.ui.DevicePreviews
-import com.google.samples.apps.nowinandroid.core.ui.TrackScreenViewEvent
-import com.google.samples.apps.nowinandroid.core.ui.TrackScrollJank
-import com.google.samples.apps.nowinandroid.core.ui.UserNewsResourcePreviewParameterProvider
-import com.google.samples.apps.nowinandroid.core.ui.userNewsResourceCardItems
-import com.google.samples.apps.nowinandroid.feature.topic.R.string
+import com.yourcompany.partygameapp.core.designsystem.component.DynamicAsyncImage
+import com.yourcompany.partygameapp.core.designsystem.component.NiaBackground
+import com.yourcompany.partygameapp.core.designsystem.component.NiaFilterChip
+import com.yourcompany.partygameapp.core.designsystem.component.NiaLoadingWheel
+import com.yourcompany.partygameapp.core.designsystem.component.scrollbar.DraggableScrollbar
+import com.yourcompany.partygameapp.core.designsystem.component.scrollbar.rememberDraggableScroller
+import com.yourcompany.partygameapp.core.designsystem.component.scrollbar.scrollbarState
+import com.yourcompany.partygameapp.core.designsystem.icon.NiaIcons
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.model.data.FollowableTopic
+import com.yourcompany.partygameapp.core.model.data.UserNewsResource
+import com.yourcompany.partygameapp.core.ui.DevicePreviews
+import com.yourcompany.partygameapp.core.ui.TrackScreenViewEvent
+import com.yourcompany.partygameapp.core.ui.TrackScrollJank
+import com.yourcompany.partygameapp.core.ui.UserNewsResourcePreviewParameterProvider
+import com.yourcompany.partygameapp.core.ui.userNewsResourceCardItems
+import com.yourcompany.partygameapp.feature.topic.R.string
 
 @Composable
 fun TopicScreen(
@@ -76,7 +76,7 @@ fun TopicScreen(
     onBackClick: () -> Unit,
     onTopicClick: (String) -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: TopicViewModel = hiltViewModel(),
+    viewModel: TopicViewModel = hilthiltViewModel(),
 ) {
     val topicUiState: TopicUiState by viewModel.topicUiState.collectAsStateWithLifecycle()
     val newsUiState: NewsUiState by viewModel.newsUiState.collectAsStateWithLifecycle()
@@ -292,7 +292,7 @@ private fun TopicToolbar(
                 Icon(
                     imageVector = NiaIcons.ArrowBack,
                     contentDescription = stringResource(
-                        id = com.google.samples.apps.nowinandroid.core.ui.R.string.core_ui_back,
+                        id = com.yourcompany.partygameapp.core.ui.R.string.core_ui_back,
                     ),
                 )
             }

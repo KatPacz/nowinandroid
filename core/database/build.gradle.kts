@@ -15,14 +15,14 @@
  */
 
 plugins {
-    alias(libs.plugins.nowinandroid.android.library)
-    alias(libs.plugins.nowinandroid.android.library.jacoco)
-    alias(libs.plugins.nowinandroid.android.room)
-    alias(libs.plugins.nowinandroid.hilt)
+    alias(libs.plugins.partygameapp.android.library)
+    alias(libs.plugins.partygameapp.android.library.jacoco)
+    alias(libs.plugins.partygameapp.android.room)
+    alias(libs.plugins.partygameapp.hilt)
 }
 
 android {
-    namespace = "com.google.samples.apps.nowinandroid.core.database"
+    namespace = "com.yourcompany.partygameapp.core.database"
 }
 
 dependencies {

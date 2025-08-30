@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.sync.status
+package com.yourcompany.partygameapp.sync.status
 
 import android.util.Log
 import javax.inject.Inject

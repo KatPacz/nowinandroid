@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.network.retrofit
+package com.yourcompany.partygameapp.core.network.retrofit
 
 import androidx.tracing.trace
-import com.google.samples.apps.nowinandroid.core.network.BuildConfig
-import com.google.samples.apps.nowinandroid.core.network.NiaNetworkDataSource
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkChangeList
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkNewsResource
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkTopic
+import com.yourcompany.partygameapp.core.network.BuildConfig
+import com.yourcompany.partygameapp.core.network.NiaNetworkDataSource
+import com.yourcompany.partygameapp.core.network.model.NetworkChangeList
+import com.yourcompany.partygameapp.core.network.model.NetworkNewsResource
+import com.yourcompany.partygameapp.core.network.model.NetworkTopic
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import okhttp3.Call

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.network.demo
+package com.yourcompany.partygameapp.core.network.demo
 
 import JvmUnitTestDemoAssetManager
 import android.os.Build.VERSION.SDK_INT
 import android.os.Build.VERSION_CODES.M
-import com.google.samples.apps.nowinandroid.core.network.Dispatcher
-import com.google.samples.apps.nowinandroid.core.network.NiaDispatchers.IO
-import com.google.samples.apps.nowinandroid.core.network.NiaNetworkDataSource
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkChangeList
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkNewsResource
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkTopic
+import com.yourcompany.partygameapp.core.network.Dispatcher
+import com.yourcompany.partygameapp.core.network.NiaDispatchers.IO
+import com.yourcompany.partygameapp.core.network.NiaNetworkDataSource
+import com.yourcompany.partygameapp.core.network.model.NetworkChangeList
+import com.yourcompany.partygameapp.core.network.model.NetworkNewsResource
+import com.yourcompany.partygameapp.core.network.model.NetworkTopic
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.ExperimentalSerializationApi

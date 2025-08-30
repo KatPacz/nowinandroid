@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.datastore.test
+package com.yourcompany.partygameapp.core.datastore.test
 
 import androidx.datastore.core.DataStore
-import com.google.samples.apps.nowinandroid.core.datastore.UserPreferences
-import com.google.samples.apps.nowinandroid.core.datastore.UserPreferencesSerializer
-import com.google.samples.apps.nowinandroid.core.datastore.di.DataStoreModule
+import com.yourcompany.partygameapp.core.datastore.UserPreferences
+import com.yourcompany.partygameapp.core.datastore.UserPreferencesSerializer
+import com.yourcompany.partygameapp.core.datastore.di.DataStoreModule
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.components.SingletonComponent

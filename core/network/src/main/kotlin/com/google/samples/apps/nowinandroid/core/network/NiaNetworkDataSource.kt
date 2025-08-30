@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.network
+package com.yourcompany.partygameapp.core.network
 
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkChangeList
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkNewsResource
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkTopic
+import com.yourcompany.partygameapp.core.network.model.NetworkChangeList
+import com.yourcompany.partygameapp.core.network.model.NetworkNewsResource
+import com.yourcompany.partygameapp.core.network.model.NetworkTopic
 
 /**
  * Interface representing network calls to the NIA backend

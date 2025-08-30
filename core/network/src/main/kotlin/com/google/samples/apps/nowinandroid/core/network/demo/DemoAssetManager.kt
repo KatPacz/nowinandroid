@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.network.demo
+package com.yourcompany.partygameapp.core.network.demo
 
 import java.io.InputStream
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.designsystem
+package com.yourcompany.partygameapp.core.designsystem
 
 import android.os.Build.VERSION.SDK_INT
 import android.os.Build.VERSION_CODES
@@ -27,21 +27,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.unit.dp
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.BackgroundTheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.DarkAndroidBackgroundTheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.DarkAndroidColorScheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.DarkAndroidGradientColors
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.DarkDefaultColorScheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.GradientColors
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LightAndroidBackgroundTheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LightAndroidColorScheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LightAndroidGradientColors
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LightDefaultColorScheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LocalBackgroundTheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LocalGradientColors
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.LocalTintTheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.TintTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.BackgroundTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.DarkAndroidBackgroundTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.DarkAndroidColorScheme
+import com.yourcompany.partygameapp.core.designsystem.theme.DarkAndroidGradientColors
+import com.yourcompany.partygameapp.core.designsystem.theme.DarkDefaultColorScheme
+import com.yourcompany.partygameapp.core.designsystem.theme.GradientColors
+import com.yourcompany.partygameapp.core.designsystem.theme.LightAndroidBackgroundTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.LightAndroidColorScheme
+import com.yourcompany.partygameapp.core.designsystem.theme.LightAndroidGradientColors
+import com.yourcompany.partygameapp.core.designsystem.theme.LightDefaultColorScheme
+import com.yourcompany.partygameapp.core.designsystem.theme.LocalBackgroundTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.LocalGradientColors
+import com.yourcompany.partygameapp.core.designsystem.theme.LocalTintTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.designsystem.theme.TintTheme
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

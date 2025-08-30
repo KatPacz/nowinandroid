@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.ui
+package com.yourcompany.partygameapp.core.ui
 
 import android.net.Uri
 import androidx.compose.foundation.lazy.LazyListScope
@@ -23,8 +23,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
-import com.google.samples.apps.nowinandroid.core.analytics.LocalAnalyticsHelper
-import com.google.samples.apps.nowinandroid.core.model.data.UserNewsResource
+import com.yourcompany.partygameapp.core.analytics.LocalAnalyticsHelper
+import com.yourcompany.partygameapp.core.model.data.UserNewsResource
 
 /**
  * Extension function for displaying a [List] of [NewsResourceCardExpanded] backed by a list of

@@ -1,145 +1,100 @@
-/*
- * Copyright 2022 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-import com.google.samples.apps.nowinandroid.NiaBuildType
+// FILE: app/build.gradle.kts (APP FOLDER)
 
+// ONLY ONE plugins block is allowed per file, and it must be at the very top.
 plugins {
-    alias(libs.plugins.nowinandroid.android.application)
-    alias(libs.plugins.nowinandroid.android.application.compose)
-    alias(libs.plugins.nowinandroid.android.application.flavors)
-    alias(libs.plugins.nowinandroid.android.application.jacoco)
-    alias(libs.plugins.nowinandroid.android.application.firebase)
-    alias(libs.plugins.nowinandroid.hilt)
-    id("com.google.android.gms.oss-licenses-plugin")
-    alias(libs.plugins.baselineprofile)
-    alias(libs.plugins.roborazzi)
-    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
+    id("kotlin-parcelize")
 }
 
 android {
+    namespace = "com.yourcompany.partygameapp"
+    compileSdk = 34
+
     defaultConfig {
-        applicationId = "com.google.samples.apps.nowinandroid"
-        versionCode = 8
-        versionName = "0.1.2" // X.Y.Z; X = Major, Y = minor, Z = Patch level
-
-        // Custom test runner to set up Hilt dependency graph
-        testInstrumentationRunner = "com.google.samples.apps.nowinandroid.core.testing.NiaTestRunner"
+        applicationId = "com.yourcompany.partygameapp"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
-        debug {
-            applicationIdSuffix = NiaBuildType.DEBUG.applicationIdSuffix
-        }
         release {
-            isMinifyEnabled = true
-            applicationIdSuffix = NiaBuildType.RELEASE.applicationIdSuffix
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"),
-                          "proguard-rules.pro")
-
-            // To publish on the Play store a private signing key is required, but to allow anyone
-            // who clones the code to sign and run the release variant, use the debug signing key.
-            // TODO: Abstract the signing configuration to a separate file to avoid hardcoding this.
-            signingConfig = signingConfigs.named("debug").get()
-            // Ensure Baseline Profile is fresh for release builds.
-            baselineProfile.automaticGenerationDuringBuild = true
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.8"
+    }
     packaging {
         resources {
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
     }
-    testOptions.unitTests.isIncludeAndroidResources = true
-    namespace = "com.google.samples.apps.nowinandroid"
 }
 
+kotlin {
+    jvmToolchain(21)
+}
+
+// This is the correct location and structure for the dependencies block.
 dependencies {
-    implementation(projects.feature.interests)
-    implementation(projects.feature.foryou)
-    implementation(projects.feature.bookmarks)
-    implementation(projects.feature.topic)
-    implementation(projects.feature.search)
-    implementation(projects.feature.settings)
+    // Compose Bill of Materials (BOM)
+    implementation(platform(libs.androidx.compose.bom))
 
-    implementation(projects.core.common)
-    implementation(projects.core.ui)
-    implementation(projects.core.designsystem)
-    implementation(projects.core.data)
-    implementation(projects.core.model)
-    implementation(projects.core.analytics)
-    implementation(projects.sync.work)
-
-    implementation(libs.androidx.activity.compose)
+    // Compose UI Libraries
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.compose.material3.adaptive)
-    implementation(libs.androidx.compose.material3.adaptive.layout)
-    implementation(libs.androidx.compose.material3.adaptive.navigation)
-    implementation(libs.androidx.compose.material3.windowSizeClass)
-    implementation(libs.androidx.compose.runtime.tracing)
+    implementation(libs.androidx.compose.material.icons.extended)
+
+    // Core Android KTX & Lifecycle
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.core.splashscreen)
-    implementation(libs.androidx.hilt.navigation.compose)
-    implementation(libs.androidx.lifecycle.runtimeCompose)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    // Navigation
     implementation(libs.androidx.navigation.compose)
-    implementation(libs.androidx.profileinstaller)
-    implementation(libs.androidx.tracing.ktx)
-    implementation(libs.androidx.window.core)
-    implementation(libs.kotlinx.coroutines.guava)
-    implementation(libs.coil.kt)
-    implementation(libs.kotlinx.serialization.json)
 
+    // Hilt - Dependency Injection
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.appcompat)
     ksp(libs.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 
-    debugImplementation(libs.androidx.compose.ui.testManifest)
-    debugImplementation(projects.uiTestHiltManifest)
+    // Room Database
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 
-    kspTest(libs.hilt.compiler)
+    // Jetpack DataStore & Splash Screen
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.core.splashscreen)
 
-    testImplementation(projects.core.dataTest)
-    testImplementation(projects.core.datastoreTest)
-    testImplementation(libs.hilt.android.testing)
-    testImplementation(projects.sync.syncTest)
-    testImplementation(libs.kotlin.test)
+    // Gson (for JSON serialization/deserialization)
+    implementation(libs.google.gson)
+    //implementation ("com.google.code.gson:gson:2.10.1")
 
-    testDemoImplementation(libs.androidx.navigation.testing)
-    testDemoImplementation(libs.robolectric)
-    testDemoImplementation(libs.roborazzi)
-    testDemoImplementation(projects.core.screenshotTesting)
-    testDemoImplementation(projects.core.testing)
-
-    androidTestImplementation(projects.core.testing)
-    androidTestImplementation(projects.core.dataTest)
-    androidTestImplementation(projects.core.datastoreTest)
-    androidTestImplementation(libs.androidx.test.espresso.core)
-    androidTestImplementation(libs.androidx.compose.ui.test)
-    androidTestImplementation(libs.hilt.android.testing)
-    androidTestImplementation(libs.kotlin.test)
-
-    baselineProfile(projects.benchmarks)
-}
-
-baselineProfile {
-    // Don't build on every iteration of a full assemble.
-    // Instead enable generation directly for the release build variant.
-    automaticGenerationDuringBuild = false
-
-    // Make use of Dex Layout Optimizations via Startup Profiles
-    dexLayoutOptimization = true
-}
-
-dependencyGuard {
-    configuration("prodReleaseRuntimeClasspath")
+    // Testing
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
 }

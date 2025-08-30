@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.ui
+package com.yourcompany.partygameapp.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.annotation.StringRes
@@ -26,11 +26,11 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.test.espresso.Espresso
-import com.google.samples.apps.nowinandroid.core.data.repository.TopicsRepository
-import com.google.samples.apps.nowinandroid.core.designsystem.theme.NiaTheme
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
-import com.google.samples.apps.nowinandroid.ui.interests2pane.InterestsListDetailScreen
-import com.google.samples.apps.nowinandroid.uitesthiltmanifest.HiltComponentActivity
+import com.yourcompany.partygameapp.core.data.repository.TopicsRepository
+import com.yourcompany.partygameapp.core.designsystem.theme.NiaTheme
+import com.yourcompany.partygameapp.core.model.data.Topic
+import com.yourcompany.partygameapp.ui.interests2pane.InterestsListDetailScreen
+import com.yourcompany.partygameapp.uitesthiltmanifest.HiltComponentActivity
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
@@ -45,7 +45,7 @@ import org.robolectric.annotation.Config
 import javax.inject.Inject
 import kotlin.properties.ReadOnlyProperty
 import kotlin.test.assertTrue
-import com.google.samples.apps.nowinandroid.feature.topic.R as FeatureTopicR
+import com.yourcompany.partygameapp.feature.topic.R as FeatureTopicR
 
 private const val EXPANDED_WIDTH = "w1200dp-h840dp"
 private const val COMPACT_WIDTH = "w412dp-h915dp"

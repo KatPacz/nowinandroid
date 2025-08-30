@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.feature.topic
+package com.yourcompany.partygameapp.feature.topic
 
 import androidx.activity.ComponentActivity
 import androidx.compose.ui.test.hasScrollToNodeAction
@@ -24,8 +24,8 @@ import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performScrollToNode
-import com.google.samples.apps.nowinandroid.core.testing.data.followableTopicTestData
-import com.google.samples.apps.nowinandroid.core.testing.data.userNewsResourcesTestData
+import com.yourcompany.partygameapp.core.testing.data.followableTopicTestData
+import com.yourcompany.partygameapp.core.testing.data.userNewsResourcesTestData
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

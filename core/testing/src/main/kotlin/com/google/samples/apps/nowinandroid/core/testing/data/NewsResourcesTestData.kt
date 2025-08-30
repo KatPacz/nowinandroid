@@ -16,9 +16,9 @@
 
 @file:Suppress("ktlint:standard:max-line-length")
 
-package com.google.samples.apps.nowinandroid.core.testing.data
+package com.yourcompany.partygameapp.core.testing.data
 
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.model.data.NewsResource
 import kotlinx.datetime.Instant
 
 val newsResourcesTestData: List<NewsResource> = listOf(

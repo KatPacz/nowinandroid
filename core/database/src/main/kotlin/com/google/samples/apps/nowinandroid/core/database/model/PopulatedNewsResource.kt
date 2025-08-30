@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.database.model
+package com.yourcompany.partygameapp.core.database.model
 
 import androidx.room.Embedded
 import androidx.room.Junction
 import androidx.room.Relation
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.model.data.NewsResource
 
 /**
  * External data layer representation of a fully populated NiA news resource

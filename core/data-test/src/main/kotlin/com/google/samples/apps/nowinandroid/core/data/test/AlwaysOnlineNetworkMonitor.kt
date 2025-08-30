@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.test
+package com.yourcompany.partygameapp.core.data.test
 
-import com.google.samples.apps.nowinandroid.core.data.util.NetworkMonitor
+import com.yourcompany.partygameapp.core.data.util.NetworkMonitor
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 import javax.inject.Inject

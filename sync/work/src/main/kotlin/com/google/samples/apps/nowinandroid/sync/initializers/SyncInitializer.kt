@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.sync.initializers
+package com.yourcompany.partygameapp.sync.initializers
 
 import android.content.Context
 import androidx.work.ExistingWorkPolicy
 import androidx.work.WorkManager
-import com.google.samples.apps.nowinandroid.sync.workers.SyncWorker
+import com.yourcompany.partygameapp.sync.workers.SyncWorker
 
 object Sync {
     // This method is initializes sync, the process that keeps the app's data current.

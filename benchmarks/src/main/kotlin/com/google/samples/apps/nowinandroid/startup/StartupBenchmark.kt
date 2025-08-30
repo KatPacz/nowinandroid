@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.startup
+package com.yourcompany.partygameapp.startup
 
 import androidx.benchmark.macro.BaselineProfileMode.Disable
 import androidx.benchmark.macro.BaselineProfileMode.Require
@@ -22,11 +22,11 @@ import androidx.benchmark.macro.CompilationMode
 import androidx.benchmark.macro.StartupMode.COLD
 import androidx.benchmark.macro.junit4.MacrobenchmarkRule
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
-import com.google.samples.apps.nowinandroid.BaselineProfileMetrics
-import com.google.samples.apps.nowinandroid.PACKAGE_NAME
-import com.google.samples.apps.nowinandroid.allowNotifications
-import com.google.samples.apps.nowinandroid.foryou.forYouWaitForContent
-import com.google.samples.apps.nowinandroid.startActivityAndAllowNotifications
+import com.yourcompany.partygameapp.BaselineProfileMetrics
+import com.yourcompany.partygameapp.PACKAGE_NAME
+import com.yourcompany.partygameapp.allowNotifications
+import com.yourcompany.partygameapp.foryou.forYouWaitForContent
+import com.yourcompany.partygameapp.startActivityAndAllowNotifications
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

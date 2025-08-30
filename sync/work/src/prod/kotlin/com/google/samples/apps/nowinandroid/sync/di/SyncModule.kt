@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.sync.di
+package com.yourcompany.partygameapp.sync.di
 
 import com.google.firebase.Firebase
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.messaging
-import com.google.samples.apps.nowinandroid.core.data.util.SyncManager
-import com.google.samples.apps.nowinandroid.sync.status.FirebaseSyncSubscriber
-import com.google.samples.apps.nowinandroid.sync.status.SyncSubscriber
-import com.google.samples.apps.nowinandroid.sync.status.WorkManagerSyncManager
+import com.yourcompany.partygameapp.core.data.util.SyncManager
+import com.yourcompany.partygameapp.sync.status.FirebaseSyncSubscriber
+import com.yourcompany.partygameapp.sync.status.SyncSubscriber
+import com.yourcompany.partygameapp.sync.status.WorkManagerSyncManager
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

@@ -14,31 +14,31 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.core.data.repository
+package com.yourcompany.partygameapp.core.data.repository
 
-import com.google.samples.apps.nowinandroid.core.data.Synchronizer
-import com.google.samples.apps.nowinandroid.core.data.model.asEntity
-import com.google.samples.apps.nowinandroid.core.data.model.topicCrossReferences
-import com.google.samples.apps.nowinandroid.core.data.model.topicEntityShells
-import com.google.samples.apps.nowinandroid.core.data.testdoubles.CollectionType
-import com.google.samples.apps.nowinandroid.core.data.testdoubles.TestNewsResourceDao
-import com.google.samples.apps.nowinandroid.core.data.testdoubles.TestNiaNetworkDataSource
-import com.google.samples.apps.nowinandroid.core.data.testdoubles.TestTopicDao
-import com.google.samples.apps.nowinandroid.core.data.testdoubles.filteredInterestsIds
-import com.google.samples.apps.nowinandroid.core.data.testdoubles.nonPresentInterestsIds
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceEntity
-import com.google.samples.apps.nowinandroid.core.database.model.NewsResourceTopicCrossRef
-import com.google.samples.apps.nowinandroid.core.database.model.PopulatedNewsResource
-import com.google.samples.apps.nowinandroid.core.database.model.TopicEntity
-import com.google.samples.apps.nowinandroid.core.database.model.asExternalModel
-import com.google.samples.apps.nowinandroid.core.datastore.NiaPreferencesDataSource
-import com.google.samples.apps.nowinandroid.core.datastore.UserPreferences
-import com.google.samples.apps.nowinandroid.core.datastore.test.InMemoryDataStore
-import com.google.samples.apps.nowinandroid.core.model.data.NewsResource
-import com.google.samples.apps.nowinandroid.core.model.data.Topic
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkChangeList
-import com.google.samples.apps.nowinandroid.core.network.model.NetworkNewsResource
-import com.google.samples.apps.nowinandroid.core.testing.notifications.TestNotifier
+import com.yourcompany.partygameapp.core.data.Synchronizer
+import com.yourcompany.partygameapp.core.data.model.asEntity
+import com.yourcompany.partygameapp.core.data.model.topicCrossReferences
+import com.yourcompany.partygameapp.core.data.model.topicEntityShells
+import com.yourcompany.partygameapp.core.data.testdoubles.CollectionType
+import com.yourcompany.partygameapp.core.data.testdoubles.TestNewsResourceDao
+import com.yourcompany.partygameapp.core.data.testdoubles.TestNiaNetworkDataSource
+import com.yourcompany.partygameapp.core.data.testdoubles.TestTopicDao
+import com.yourcompany.partygameapp.core.data.testdoubles.filteredInterestsIds
+import com.yourcompany.partygameapp.core.data.testdoubles.nonPresentInterestsIds
+import com.yourcompany.partygameapp.core.database.model.NewsResourceEntity
+import com.yourcompany.partygameapp.core.database.model.NewsResourceTopicCrossRef
+import com.yourcompany.partygameapp.core.database.model.PopulatedNewsResource
+import com.yourcompany.partygameapp.core.database.model.TopicEntity
+import com.yourcompany.partygameapp.core.database.model.asExternalModel
+import com.yourcompany.partygameapp.core.datastore.NiaPreferencesDataSource
+import com.yourcompany.partygameapp.core.datastore.UserPreferences
+import com.yourcompany.partygameapp.core.datastore.test.InMemoryDataStore
+import com.yourcompany.partygameapp.core.model.data.NewsResource
+import com.yourcompany.partygameapp.core.model.data.Topic
+import com.yourcompany.partygameapp.core.network.model.NetworkChangeList
+import com.yourcompany.partygameapp.core.network.model.NetworkNewsResource
+import com.yourcompany.partygameapp.core.testing.notifications.TestNotifier
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.UnconfinedTestDispatcher

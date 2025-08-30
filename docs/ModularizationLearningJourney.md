@@ -48,7 +48,7 @@ maintenance cost. In addition, adding more modules increases the complexity of t
 setup, when compared to a single monolithic module. This can be mitigated by making use of
 convention plugins, to extract reusable and composable build configuration into type-safe Kotlin
 code. In the Now in Android app, these convention plugins can be found in
-the [`build-logic` folder](https://github.com/android/nowinandroid/tree/main/build-logic).
+the [`build-logic` folder](https://github.com/android/partygameapp/tree/main/build-logic).
 
 **Not enough modules** - conversely if your modules are few, large and tightly coupled, you end up
 with yet another monolith. This means you lose some benefits of modularization. If your module is
@@ -78,7 +78,7 @@ how you can organize your project. In general, you should strive for low couplin
 * **High cohesion** - A module should comprise a collection of code that acts as a system. It should
   have clearly defined responsibilities and stay within boundaries of certain domain knowledge. For
   example,
-  the [`core:network` module](https://github.com/android/nowinandroid/tree/main/core/network) in Now
+  the [`core:network` module](https://github.com/android/partygameapp/tree/main/core/network) in Now
   in Android is responsible for making network requests, handling responses from a remote data
   source, and supplying data to other modules.
 
@@ -143,8 +143,8 @@ Using the above modularization strategy, the Now in Android app has the followin
    <td>Functionality associated with a specific feature or user journey. Typically contains UI components and ViewModels which read data from other modules.<br>
    Examples include:<br>
    <ul>
-      <li><a href="https://github.com/android/nowinandroid/tree/main/feature/topic"><code>feature:topic</code></a> displays information about a topic on the TopicScreen.</li>
-      <li><a href="https://github.com/android/nowinandroid/tree/main/feature/foryou"><code>feature:foryou</code></a> which displays the user's news feed, and onboarding during first run, on the For You screen.</li>
+      <li><a href="https://github.com/android/partygameapp/tree/main/feature/topic"><code>feature:topic</code></a> displays information about a topic on the TopicScreen.</li>
+      <li><a href="https://github.com/android/partygameapp/tree/main/feature/foryou"><code>feature:foryou</code></a> which displays the user's news feed, and onboarding during first run, on the For You screen.</li>
       </ul>
    </td>
    <td><code>TopicScreen</code><br>

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.nowinandroid.sync.status
+package com.yourcompany.partygameapp.sync.status
 
 import android.content.Context
 import androidx.work.ExistingWorkPolicy
 import androidx.work.WorkInfo
 import androidx.work.WorkInfo.State
 import androidx.work.WorkManager
-import com.google.samples.apps.nowinandroid.core.data.util.SyncManager
-import com.google.samples.apps.nowinandroid.sync.initializers.SYNC_WORK_NAME
-import com.google.samples.apps.nowinandroid.sync.workers.SyncWorker
+import com.yourcompany.partygameapp.core.data.util.SyncManager
+import com.yourcompany.partygameapp.sync.initializers.SYNC_WORK_NAME
+import com.yourcompany.partygameapp.sync.workers.SyncWorker
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.conflate
